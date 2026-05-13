@@ -55,11 +55,11 @@ export default function ServicesOverviewSection() {
             />
 
             {/* Center Heart — stays fixed, doesn't rotate */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30 flex flex-col items-center">
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30 flex items-center justify-center">
               {/* Outer glow ring */}
-              <div className="absolute w-36 h-36 rounded-full bg-yellow-400/10 animate-glow-pulse" />
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-36 h-36 rounded-full bg-yellow-400/10 animate-glow-pulse" />
               {/* Pulsing aura ring */}
-              <div className="absolute w-24 h-24 rounded-full bg-gradient-to-br from-yellow-200/40 to-green-200/20 animate-breathe" />
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24 rounded-full bg-gradient-to-br from-yellow-200/40 to-green-200/20 animate-breathe" />
               {/* Main center circle */}
               <div className="relative w-[72px] h-[72px] rounded-full bg-gradient-to-br from-yellow-500 to-green-800 flex items-center justify-center shadow-lg">
                 <Heart className="w-8 h-8 text-white animate-breathe" fill="white" />
