@@ -1,5 +1,3 @@
-import { useState } from 'react';
-
 function WhatsAppIcon({ className }: { className?: string }) {
   return (
     <svg
@@ -14,36 +12,27 @@ function WhatsAppIcon({ className }: { className?: string }) {
 }
 
 export default function WhatsAppButton() {
-  const [hovered, setHovered] = useState(false);
-
   return (
-    <div className="fixed bottom-6 left-6 z-50 flex items-center gap-3">
-      {/* Tooltip label */}
-      <div
-        className={`relative bg-green-950 text-white text-xs font-body font-medium px-3 py-2 rounded-lg shadow-lg whitespace-nowrap transition-all duration-300 ${
-          hovered ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-2 pointer-events-none'
-        }`}
-      >
+    <a
+      href="https://wa.me/919999999999"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="fixed bottom-6 left-6 z-50 flex items-center gap-3 group"
+      aria-label="Chat on WhatsApp"
+    >
+      {/* Text label — always visible on the left */}
+      <span className="font-body text-sm font-medium text-white bg-green-950/80 backdrop-blur-sm px-4 py-2.5 rounded-lg shadow-lg whitespace-nowrap transition-all duration-300 group-hover:bg-green-950">
         Chat on WhatsApp
-        <div className="absolute left-0 top-1/2 -translate-x-1 -translate-y-1/2 w-2 h-2 bg-green-950 rotate-45" />
-      </div>
+      </span>
 
       {/* Button */}
-      <a
-        href="https://wa.me/919999999999"
-        target="_blank"
-        rel="noopener noreferrer"
-        onMouseEnter={() => setHovered(true)}
-        onMouseLeave={() => setHovered(false)}
-        className="relative w-14 h-14 rounded-full bg-[#25D366] text-white shadow-lg flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-xl group"
-        aria-label="Chat on WhatsApp"
-      >
+      <span className="relative w-14 h-14 rounded-full bg-[#25D366] text-white shadow-lg flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:shadow-xl">
         {/* Breathing glow ring */}
         <span className="absolute inset-0 rounded-full bg-[#25D366]/30 animate-ping-slow" />
         <span className="absolute inset-[-3px] rounded-full border-2 border-[#25D366]/40 animate-pulse-gentle" />
 
         <WhatsAppIcon className="w-7 h-7 relative z-10" />
-      </a>
-    </div>
+      </span>
+    </a>
   );
 }
