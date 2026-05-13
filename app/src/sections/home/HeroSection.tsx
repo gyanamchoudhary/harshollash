@@ -64,7 +64,7 @@ export default function HeroSection() {
                 <ArrowRight className="w-4 h-4" />
               </Link>
               <Link
-                to="/contact"
+                to="/contact#contact-form"
                 className="inline-flex items-center gap-2 border-2 border-white/80 text-white px-7 py-3.5 rounded-md font-body font-medium text-sm hover:bg-white/10 transition-all"
               >
                 Book Consultation

@@ -172,7 +172,7 @@ export default function Navbar() {
                 ))}
                 <div className="mt-4 px-4">
                   <Link
-                    to="/contact"
+                    to="/contact#contact-form"
                     className="block w-full text-center bg-green-950 text-white py-3 rounded-md font-body font-medium hover:bg-green-900 transition-colors"
                   >
                     Book Consultation

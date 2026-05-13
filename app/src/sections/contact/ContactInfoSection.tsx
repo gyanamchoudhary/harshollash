@@ -83,7 +83,7 @@ export default function ContactInfoSection() {
 
           {/* Right: Contact Form */}
           <ScrollReveal direction="right">
-            <div className="bg-white border-2 border-green-600/20 rounded-3xl p-8 shadow-lg">
+            <div id="contact-form" className="bg-white border-2 border-green-600/20 rounded-3xl p-8 shadow-lg">
               <h3 className="font-heading text-xl text-green-950 mb-2">Send Us a Message</h3>
               <p className="font-body text-sm text-green-800 mb-6">
                 Fill out the form below and we&apos;ll get back to you shortly.
