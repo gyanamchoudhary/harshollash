@@ -34,7 +34,7 @@ export default function ServiceHeroSection({ service }: Props) {
 
       <div className="max-w-container mx-auto px-4 sm:px-6 lg:px-10 w-full relative z-10 pt-32">
         <div ref={contentRef}>
-          <p className="font-body text-sm text-white/60 mb-3">
+          <p className="font-body text-sm text-white/80 mb-3">
             Home / Services / {service.name}
           </p>
           <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl text-white leading-tight">

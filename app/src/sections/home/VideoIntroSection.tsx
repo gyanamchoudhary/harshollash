@@ -46,7 +46,7 @@ export default function VideoIntroSection() {
             <X className="w-8 h-8" />
           </button>
           <div className="w-full max-w-4xl aspect-video bg-green-950 rounded-xl flex items-center justify-center" onClick={(e) => e.stopPropagation()}>
-            <p className="text-white/60 font-body text-center">
+            <p className="text-white/80 font-body text-center">
               <Play className="w-16 h-16 mx-auto mb-4 opacity-40" />
               Video content coming soon
             </p>

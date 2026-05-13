@@ -62,7 +62,9 @@ export default function Navbar() {
                     <button
                       className={`flex items-center gap-1 font-body text-sm font-medium transition-colors py-2 ${
                         isActive('/services')
-                          ? 'text-green-800'
+                          ? scrolled
+                            ? 'text-green-800'
+                            : 'text-white'
                           : scrolled
                           ? 'text-green-950 hover:text-green-800'
                           : 'text-white/90 hover:text-white'
@@ -89,11 +91,13 @@ export default function Navbar() {
                     to={item.href}
                     className={`font-body text-sm font-medium transition-colors py-2 relative ${
                       isActive(item.href)
-                        ? 'text-green-800'
+                        ? scrolled
+                          ? 'text-green-800'
+                          : 'text-white'
                         : scrolled
                         ? 'text-green-950 hover:text-green-800'
                         : 'text-white/90 hover:text-white'
-                    } ${isActive(item.href) ? 'border-b-2 border-green-800' : ''}`}
+                    } ${isActive(item.href) ? (scrolled ? 'border-b-2 border-green-800' : 'border-b-2 border-white') : ''}`}
                   >
                     {item.label}
                   </Link>
@@ -109,7 +113,7 @@ export default function Navbar() {
               target="_blank"
               rel="noopener noreferrer"
               className={`flex items-center gap-2 text-sm font-body font-medium transition-colors ${
-                scrolled ? 'text-green-800 hover:text-green-700' : 'text-white/90 hover:text-white'
+                scrolled ? 'text-green-800 hover:text-green-950' : 'text-white/90 hover:text-white'
               }`}
             >
               <Phone className="w-4 h-4" />

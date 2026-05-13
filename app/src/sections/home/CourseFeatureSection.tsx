@@ -25,7 +25,7 @@ export default function CourseFeatureSection() {
                 <span className="font-body text-[9px] lg:text-[10px] font-semibold text-green-800 leading-tight">
                   Certified by
                 </span>
-                <span className="font-body text-[8px] lg:text-[9px] text-green-700">
+                <span className="font-body text-[8px] lg:text-[9px] text-green-800">
                   Pranashakti USA, Inc.
                 </span>
               </div>
@@ -41,7 +41,7 @@ export default function CourseFeatureSection() {
               <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl text-green-950 leading-tight">
                 Pranashakti, Healing &amp; Scanning Classes
               </h2>
-              <p className="font-body text-green-700 mt-5 leading-relaxed">
+              <p className="font-body text-green-800 mt-5 leading-relaxed">
                 A comprehensive 27-hour certification course that teaches you the ancient art of
                 Pranashakti healing, energy scanning, and aura diagnosis. Certified by Pranashakti
                 USA, Inc., this course combines traditional wisdom with modern techniques.
@@ -60,7 +60,7 @@ export default function CourseFeatureSection() {
                       <Icon className="w-5 h-5 text-green-800 mr-2" />
                       <span className="font-heading text-2xl lg:text-3xl text-green-950">{value}</span>
                     </div>
-                    <p className="font-body text-xs text-green-700">{label}</p>
+                    <p className="font-body text-xs text-green-800">{label}</p>
                   </div>
                 ))}
               </div>

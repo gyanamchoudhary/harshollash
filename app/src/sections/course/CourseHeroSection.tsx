@@ -24,7 +24,7 @@ export default function CourseHeroSection() {
       <div className="max-w-container mx-auto px-4 sm:px-6 lg:px-10 w-full pt-24 pb-12 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div ref={contentRef}>
-            <p className="font-body text-sm text-white/60 mb-4">Home / Course</p>
+            <p className="font-body text-sm text-white/80 mb-4">Home / Course</p>
             <h1 className="font-heading text-3xl sm:text-4xl lg:text-5xl xl:text-6xl text-white leading-tight">
               Pranashakti, Healing &amp; Scanning Classes
             </h1>

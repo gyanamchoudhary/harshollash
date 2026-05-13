@@ -50,9 +50,9 @@ export default function ContactInfoSection() {
                   <card.icon className="w-8 h-8 text-green-800 flex-shrink-0 mt-1" strokeWidth={1.5} />
                   <div>
                     <h4 className="font-heading text-lg text-green-950 mb-1">{card.title}</h4>
-                    <p className="font-body text-sm text-green-700 whitespace-pre-line">{card.info}</p>
+                    <p className="font-body text-sm text-green-800 whitespace-pre-line">{card.info}</p>
                     {card.subInfo && (
-                      <p className="font-body text-xs text-green-600 mt-1">{card.subInfo}</p>
+                      <p className="font-body text-xs text-green-800 mt-1">{card.subInfo}</p>
                     )}
                   </div>
                 </div>
@@ -85,7 +85,7 @@ export default function ContactInfoSection() {
           <ScrollReveal direction="right">
             <div className="bg-white border-2 border-green-600/20 rounded-3xl p-8 shadow-lg">
               <h3 className="font-heading text-xl text-green-950 mb-2">Send Us a Message</h3>
-              <p className="font-body text-sm text-green-700 mb-6">
+              <p className="font-body text-sm text-green-800 mb-6">
                 Fill out the form below and we&apos;ll get back to you shortly.
               </p>
 
@@ -97,7 +97,7 @@ export default function ContactInfoSection() {
                     </svg>
                   </div>
                   <h4 className="font-heading text-lg text-green-950">Thank You!</h4>
-                  <p className="font-body text-sm text-green-700 mt-2">We will contact you soon.</p>
+                  <p className="font-body text-sm text-green-800 mt-2">We will contact you soon.</p>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-4">

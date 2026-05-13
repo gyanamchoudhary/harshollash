@@ -13,7 +13,7 @@ export default function MissionVisionSection() {
                 Our Mission
               </span>
               <h3 className="font-heading text-2xl text-green-950 mb-4">Spreading Inner Joy</h3>
-              <p className="font-body text-green-700 leading-relaxed">
+              <p className="font-body text-green-800 leading-relaxed">
                 To make the ancient science of Pranashakti healing and spiritual wellness accessible
                 to every corner of the world, empowering individuals to discover their innate healing
                 abilities and live with purpose, peace, and vitality.
@@ -28,7 +28,7 @@ export default function MissionVisionSection() {
                 Our Vision
               </span>
               <h3 className="font-heading text-2xl text-green-950 mb-4">A World of Wellness</h3>
-              <p className="font-body text-green-700 leading-relaxed">
+              <p className="font-body text-green-800 leading-relaxed">
                 A world where every individual has access to holistic healing practices, where
                 spiritual wellness is integrated into daily life, and where communities thrive
                 through shared consciousness, compassion, and inner harmony.

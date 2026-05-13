@@ -27,7 +27,7 @@ export default function TestimonialsSection() {
           <p className="font-body font-semibold text-green-950 text-sm">
             {testimonial.author}
           </p>
-          <p className="font-body text-xs text-green-700">{testimonial.role}</p>
+          <p className="font-body text-xs text-green-800">{testimonial.role}</p>
         </div>
       </div>
     </div>

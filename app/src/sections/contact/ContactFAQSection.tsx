@@ -32,7 +32,7 @@ export default function ContactFAQSection() {
                   }`}
                 >
                   <div className="px-5 pb-5">
-                    <p className="font-body text-sm text-green-700 leading-relaxed">
+                    <p className="font-body text-sm text-green-800 leading-relaxed">
                       {item.answer}
                     </p>
                   </div>

@@ -23,7 +23,7 @@ export default function ServiceStepsSection({ service }: Props) {
                 <div className={i % 2 !== 0 ? 'lg:order-1 lg:text-right' : ''}>
                   <span className="font-heading text-6xl text-yellow-500/50">{step.number}</span>
                   <h3 className="font-heading text-2xl text-green-950 -mt-2 mb-4">{step.title}</h3>
-                  <p className="font-body text-green-700 leading-relaxed">{step.description}</p>
+                  <p className="font-body text-green-800 leading-relaxed">{step.description}</p>
                 </div>
               </div>
             </ScrollReveal>

@@ -28,8 +28,8 @@ export default function TeamSection() {
                 <h3 className="font-heading text-2xl lg:text-3xl text-green-950 mb-2">
                   {founder.name}
                 </h3>
-                <p className="font-body text-green-700 text-sm mb-4">{founder.role}</p>
-                <p className="font-body text-green-700 leading-relaxed text-sm lg:text-base mb-6">
+                <p className="font-body text-green-800 text-sm mb-4">{founder.role}</p>
+                <p className="font-body text-green-800 leading-relaxed text-sm lg:text-base mb-6">
                   With over 20 years of experience in Pranashakti healing, meditation, and
                   spiritual wellness, Guruji has transformed thousands of lives through his
                   teachings and healing sessions. His wisdom and compassion guide every aspect
@@ -60,7 +60,7 @@ export default function TeamSection() {
                   />
                 </div>
                 <h4 className="font-heading text-lg text-green-950 mb-1">{member.name}</h4>
-                <p className="font-body text-xs text-green-700">{member.role}</p>
+                <p className="font-body text-xs text-green-800">{member.role}</p>
               </div>
             </ScrollReveal>
           ))}

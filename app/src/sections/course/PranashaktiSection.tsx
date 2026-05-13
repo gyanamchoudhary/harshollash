@@ -14,7 +14,7 @@ export default function PranashaktiSection() {
         </ScrollReveal>
 
         <ScrollReveal delay={0.1}>
-          <p className="font-body text-green-700 leading-relaxed mt-6 text-base lg:text-lg">
+          <p className="font-body text-green-800 leading-relaxed mt-6 text-base lg:text-lg">
             Pranashakti is the ancient science of life force energy - the vital energy that flows
             through all living beings. Derived from Sanskrit, &apos;Prana&apos; means life force and
             &apos;Shakti&apos; means power or energy. This healing modality works on the principle that
@@ -30,7 +30,7 @@ export default function PranashaktiSection() {
               &ldquo;When Prana flows freely through the body, disease cannot exist. The healer&apos;s role
               is to remove the obstacles to this natural flow.&rdquo;
             </p>
-            <p className="font-body text-sm text-green-700 mt-4">- Ancient Vedic Text</p>
+            <p className="font-body text-sm text-green-800 mt-4">- Ancient Vedic Text</p>
           </div>
         </ScrollReveal>
 

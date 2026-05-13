@@ -27,7 +27,7 @@ export default function BrandStorySection() {
             </ScrollReveal>
 
             <ScrollReveal delay={0.1}>
-              <p className="font-body text-green-700 leading-relaxed mt-6">
+              <p className="font-body text-green-800 leading-relaxed mt-6">
                 HARSHOLLASHA was born from a deep calling to share the transformative power of ancient
                 healing wisdom with the modern world. Our founder, Guruji, spent decades studying and
                 practicing Pranashakti healing, meditation, and spiritual wellness across the sacred
@@ -36,7 +36,7 @@ export default function BrandStorySection() {
             </ScrollReveal>
 
             <ScrollReveal delay={0.2}>
-              <p className="font-body text-green-700 leading-relaxed mt-4">
+              <p className="font-body text-green-800 leading-relaxed mt-4">
                 What began as a personal spiritual journey evolved into a mission to help others
                 discover their inner joy, balance their energy, and live more fulfilling lives. Today,
                 HARSHOLLASHA stands as a beacon of holistic wellness, combining time-honored traditions
@@ -45,7 +45,7 @@ export default function BrandStorySection() {
             </ScrollReveal>
 
             <ScrollReveal delay={0.3}>
-              <p className="font-body text-green-700 leading-relaxed mt-4">
+              <p className="font-body text-green-800 leading-relaxed mt-4">
                 We believe that every individual carries within them the capacity for profound healing
                 and transformation. Our mission is to awaken that potential and guide each person on
                 their unique path to wellness.

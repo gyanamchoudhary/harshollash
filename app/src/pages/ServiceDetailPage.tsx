@@ -16,7 +16,7 @@ export default function ServiceDetailPage() {
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
           <h1 className="font-heading text-4xl text-green-950 mb-4">Service Not Found</h1>
-          <p className="font-body text-green-700">The service you are looking for does not exist.</p>
+          <p className="font-body text-green-800">The service you are looking for does not exist.</p>
         </div>
       </div>
     );

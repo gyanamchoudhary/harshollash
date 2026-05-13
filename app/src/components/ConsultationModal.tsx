@@ -37,7 +37,7 @@ export default function ConsultationModal({ open, onOpenChange }: ConsultationMo
           <DialogTitle className="font-heading text-2xl text-green-950">
             Book a Free Consultation
           </DialogTitle>
-          <p className="font-body text-sm text-green-700 mt-2">
+          <p className="font-body text-sm text-green-800 mt-2">
             Fill out the form and our team will contact you within 24 hours.
           </p>
         </DialogHeader>
@@ -49,7 +49,7 @@ export default function ConsultationModal({ open, onOpenChange }: ConsultationMo
               </svg>
             </div>
             <h3 className="font-heading text-xl text-green-950 mb-2">Thank You!</h3>
-            <p className="font-body text-green-700">We will contact you soon.</p>
+            <p className="font-body text-green-800">We will contact you soon.</p>
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="p-6 pt-4 space-y-4">

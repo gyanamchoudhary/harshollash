@@ -54,15 +54,15 @@ export default function BlogGridSection() {
                     <h3 className="font-heading text-lg text-green-950 leading-snug group-hover:text-green-800 transition-colors line-clamp-2">
                       {post.title}
                     </h3>
-                    <p className="font-body text-sm text-green-700 mt-2 line-clamp-3 leading-relaxed">
+                    <p className="font-body text-sm text-green-800 mt-2 line-clamp-3 leading-relaxed">
                       {post.excerpt}
                     </p>
                     <div className="flex items-center gap-4 mt-4 pt-4 border-t border-gray-100">
-                      <span className="flex items-center gap-1.5 font-body text-xs text-green-600">
+                      <span className="flex items-center gap-1.5 font-body text-xs text-green-800">
                         <Calendar className="w-3.5 h-3.5" />
                         {post.date}
                       </span>
-                      <span className="flex items-center gap-1.5 font-body text-xs text-green-600">
+                      <span className="flex items-center gap-1.5 font-body text-xs text-green-800">
                         <Clock className="w-3.5 h-3.5" />
                         {post.readTime}
                       </span>

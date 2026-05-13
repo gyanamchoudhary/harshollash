@@ -37,7 +37,7 @@ export default function Footer() {
               </div>
               <span className="font-heading text-lg font-medium">HARSHOLLASHA</span>
             </Link>
-            <p className="text-white/70 font-body text-sm leading-relaxed mb-6">
+            <p className="text-white/85 font-body text-sm leading-relaxed mb-6">
               Inner Joy On Every Face. Discover the transformative power of Pranashakti healing,
               meditation, and spiritual wellness.
             </p>
@@ -66,7 +66,7 @@ export default function Footer() {
                 <li key={link.label}>
                   <Link
                     to={link.href}
-                    className="text-white/70 hover:text-white font-body text-sm transition-colors hover:underline underline-offset-4"
+                    className="text-white/85 hover:text-white font-body text-sm transition-colors hover:underline underline-offset-4"
                   >
                     {link.label}
                   </Link>
@@ -83,7 +83,7 @@ export default function Footer() {
                 <li key={link.label}>
                   <Link
                     to={link.href}
-                    className="text-white/70 hover:text-white font-body text-sm transition-colors hover:underline underline-offset-4"
+                    className="text-white/85 hover:text-white font-body text-sm transition-colors hover:underline underline-offset-4"
                   >
                     {link.label}
                   </Link>
@@ -98,15 +98,15 @@ export default function Footer() {
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <Mail className="w-5 h-5 text-yellow-500 mt-0.5 flex-shrink-0" />
-                <span className="text-white/70 font-body text-sm">info@harshollasha.com</span>
+                <span className="text-white/85 font-body text-sm">info@harshollasha.com</span>
               </li>
               <li className="flex items-start gap-3">
                 <Phone className="w-5 h-5 text-yellow-500 mt-0.5 flex-shrink-0" />
-                <span className="text-white/70 font-body text-sm">+91 99999 99999</span>
+                <span className="text-white/85 font-body text-sm">+91 99999 99999</span>
               </li>
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-yellow-500 mt-0.5 flex-shrink-0" />
-                <span className="text-white/70 font-body text-sm">
+                <span className="text-white/85 font-body text-sm">
                   HARSHOLLASHA Wellness Center,
                   <br />
                   India
@@ -118,14 +118,14 @@ export default function Footer() {
 
         {/* Divider */}
         <div className="border-t border-white/20 mt-12 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-white/60 font-body text-xs">
+          <p className="text-white/80 font-body text-xs">
             &copy; {new Date().getFullYear()} HARSHOLLASHA. All Rights Reserved.
           </p>
           <div className="flex items-center gap-6">
-            <a href="#" className="text-white/60 hover:text-white font-body text-xs transition-colors">
+            <a href="#" className="text-white/80 hover:text-white font-body text-xs transition-colors">
               Privacy Policy
             </a>
-            <a href="#" className="text-white/60 hover:text-white font-body text-xs transition-colors">
+            <a href="#" className="text-white/80 hover:text-white font-body text-xs transition-colors">
               Terms of Service
             </a>
           </div>

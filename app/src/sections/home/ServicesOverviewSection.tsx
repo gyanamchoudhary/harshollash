@@ -32,7 +32,7 @@ export default function ServicesOverviewSection() {
             </h2>
             <Link
               to="/services/meditation"
-              className="inline-flex items-center gap-2 font-body text-sm font-medium text-green-800 hover:text-green-700 transition-colors group"
+              className="inline-flex items-center gap-2 font-body text-sm font-medium text-green-800 hover:text-green-950 transition-colors group"
             >
               View All Services
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -178,7 +178,7 @@ export default function ServicesOverviewSection() {
                         <div className="w-44 bg-white rounded-xl border border-green-600/20 p-5 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 hover:scale-105">
                           <IconComponent className="w-10 h-10 text-green-800 mb-3" strokeWidth={1.5} />
                           <h3 className="font-heading text-base text-green-950 mb-1">{service.name}</h3>
-                          <p className="font-body text-xs text-green-700 leading-relaxed line-clamp-2">
+                          <p className="font-body text-xs text-green-800 leading-relaxed line-clamp-2">
                             {service.shortDescription}
                           </p>
                         </div>
@@ -201,7 +201,7 @@ export default function ServicesOverviewSection() {
                   <div className="bg-white rounded-xl border border-green-600/20 p-6 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 group">
                     <IconComponent className="w-10 h-10 text-green-800 mb-4" strokeWidth={1.5} />
                     <h3 className="font-heading text-lg text-green-950 mb-2">{service.name}</h3>
-                    <p className="font-body text-sm text-green-700 leading-relaxed">
+                    <p className="font-body text-sm text-green-800 leading-relaxed">
                       {service.shortDescription}
                     </p>
                   </div>

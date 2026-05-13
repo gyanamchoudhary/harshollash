@@ -18,7 +18,7 @@ export default function CourseCTASection() {
             <div className="bg-white rounded-2xl p-8 shadow-md border border-green-600/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
               <h3 className="font-heading text-xl text-green-950 mb-2">Online Class</h3>
               <p className="font-heading text-3xl text-green-950 mb-4">INR 21,000</p>
-              <p className="font-body text-xs text-green-700 mb-6">
+              <p className="font-body text-xs text-green-800 mb-6">
                 27-Hour Live Training | Digital Materials | Online Certification | 6-Month Access
               </p>
               <Link
@@ -37,7 +37,7 @@ export default function CourseCTASection() {
               </span>
               <h3 className="font-heading text-xl text-white mb-2">Offline Class</h3>
               <p className="font-heading text-3xl text-yellow-500 mb-4">INR 27,000</p>
-              <p className="font-body text-xs text-white/70 mb-6">
+              <p className="font-body text-xs text-white/85 mb-6">
                 In-Person Hands-on Training | Physical Materials | Physical Certificate | Lifetime Access
               </p>
               <Link
@@ -53,7 +53,7 @@ export default function CourseCTASection() {
         <ScrollReveal delay={0.3}>
           <div className="flex items-center justify-center gap-2 mt-8">
             <Shield className="w-5 h-5 text-green-800" />
-            <p className="font-body text-sm text-green-700">
+            <p className="font-body text-sm text-green-800">
               100% Satisfaction Guarantee - Full refund if not satisfied after the first module
             </p>
           </div>

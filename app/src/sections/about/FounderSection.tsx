@@ -31,13 +31,13 @@ export default function FounderSection() {
               <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl text-green-950">
                 Harshollasha Guruji
               </h2>
-              <p className="font-body text-green-700 mt-2">
+              <p className="font-body text-green-800 mt-2">
                 Pranashakti Healing Master | Meditation Guide | Spiritual Mentor
               </p>
             </ScrollReveal>
 
             <ScrollReveal delay={0.1}>
-              <p className="font-body text-green-700 leading-relaxed mt-6">
+              <p className="font-body text-green-800 leading-relaxed mt-6">
                 Guruji embarked on his spiritual journey over two decades ago, seeking answers to
                 life&apos;s deepest questions. Through years of intensive study and practice under
                 renowned spiritual masters, he mastered the ancient art of Pranashakti healing - a
@@ -46,7 +46,7 @@ export default function FounderSection() {
             </ScrollReveal>
 
             <ScrollReveal delay={0.2}>
-              <p className="font-body text-green-700 leading-relaxed mt-4">
+              <p className="font-body text-green-800 leading-relaxed mt-4">
                 His teachings blend ancient Vedic wisdom with practical modern applications, making
                 spiritual wellness accessible to seekers from all walks of life. Under his guidance,
                 thousands have experienced profound healing, discovered their inner peace, and
@@ -75,7 +75,7 @@ export default function FounderSection() {
                 {credentials.map((cred) => (
                   <div key={cred} className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-green-800 flex-shrink-0 mt-0.5" />
-                    <span className="font-body text-sm text-green-700">{cred}</span>
+                    <span className="font-body text-sm text-green-800">{cred}</span>
                   </div>
                 ))}
               </div>

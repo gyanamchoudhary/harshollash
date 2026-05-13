@@ -32,7 +32,7 @@ export default function ScanReportSection() {
             </ScrollReveal>
 
             <ScrollReveal delay={0.1}>
-              <p className="font-body text-green-700 leading-relaxed mt-5">
+              <p className="font-body text-green-800 leading-relaxed mt-5">
                 As part of the course, you will learn to perform comprehensive energy scans and
                 interpret detailed reports. These reports reveal the state of your chakras, energy
                 flow patterns, blockages, and overall vibrational health. Understanding these readings

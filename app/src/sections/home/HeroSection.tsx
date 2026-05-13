@@ -88,7 +88,7 @@ export default function HeroSection() {
               <h3 className="font-heading text-lg text-green-950 mb-1">
                 Pranashakti Healing Course
               </h3>
-              <div className="flex items-center gap-4 text-xs font-body text-green-700 mb-4">
+              <div className="flex items-center gap-4 text-xs font-body text-green-800 mb-4">
                 <span className="flex items-center gap-1"><Clock className="w-3.5 h-3.5" /> 27 Hours</span>
                 <span className="flex items-center gap-1"><Award className="w-3.5 h-3.5" /> Certified</span>
                 <span className="flex items-center gap-1"><Globe className="w-3.5 h-3.5" /> Online/Offline</span>
@@ -97,7 +97,7 @@ export default function HeroSection() {
                 <span className="font-heading text-xl text-green-950">INR 21,000</span>
                 <Link
                   to="/course"
-                  className="inline-flex items-center gap-1 text-sm font-body font-medium text-green-800 hover:text-green-700"
+                  className="inline-flex items-center gap-1 text-sm font-body font-medium text-green-800 hover:text-green-950"
                 >
                   Learn More <ArrowRight className="w-4 h-4" />
                 </Link>
@@ -108,8 +108,8 @@ export default function HeroSection() {
 
         {/* Scroll Indicator */}
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden lg:flex flex-col items-center animate-bounce-soft">
-          <span className="text-white/60 font-body text-xs mb-2">Scroll Down</span>
-          <ChevronDown className="w-5 h-5 text-white/60" />
+          <span className="text-white/80 font-body text-xs mb-2">Scroll Down</span>
+          <ChevronDown className="w-5 h-5 text-white/80" />
         </div>
       </div>
     </section>

@@ -29,7 +29,7 @@ export default function SectionHeader({ label, heading, description, align = 'ce
         <p
           className={`font-body text-base lg:text-lg mt-4 max-w-xl ${
             align === 'center' ? 'mx-auto' : ''
-          } ${dark ? 'text-white/80' : 'text-green-700'}`}
+          } ${dark ? 'text-white/80' : 'text-green-800'}`}
         >
           {description}
         </p>

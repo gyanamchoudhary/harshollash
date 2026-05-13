@@ -43,7 +43,7 @@ export default function CourseOverviewSection() {
 
           <ScrollReveal direction="right">
             <div>
-              <p className="font-body text-green-700 leading-relaxed text-base lg:text-lg">
+              <p className="font-body text-green-800 leading-relaxed text-base lg:text-lg">
                 This comprehensive 27-hour program takes you on a transformative journey from
                 beginner to certified Pranashakti healer. You will learn to sense, channel, and
                 direct healing energy to restore balance in yourself and others. The course

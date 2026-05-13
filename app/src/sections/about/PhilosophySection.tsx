@@ -39,7 +39,7 @@ export default function PhilosophySection() {
               <div className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1">
                 <pillar.icon className="w-12 h-12 text-green-800 mx-auto mb-4" strokeWidth={1.5} />
                 <h3 className="font-heading text-xl text-green-950 mb-3">{pillar.title}</h3>
-                <p className="font-body text-sm text-green-700 leading-relaxed">
+                <p className="font-body text-sm text-green-800 leading-relaxed">
                   {pillar.description}
                 </p>
               </div>

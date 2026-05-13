@@ -28,7 +28,7 @@ export default function CertificationSection() {
               <h3 className="font-heading text-2xl text-green-950">Certificate of Completion</h3>
               <p className="font-body text-green-800 mt-2">Pranashakti Healing &amp; Scanning</p>
             </div>
-            <p className="font-body text-green-700 leading-relaxed">
+            <p className="font-body text-green-800 leading-relaxed">
               This certifies that the bearer has successfully completed the 27-hour Pranashakti
               Healing &amp; Scanning certification program, demonstrating competency in energy
               healing, scanning, and spiritual wellness practices.
@@ -45,7 +45,7 @@ export default function CertificationSection() {
               <div className="text-center">
                 <detail.icon className="w-12 h-12 text-green-800 mx-auto mb-4" strokeWidth={1.5} />
                 <h4 className="font-heading text-lg text-green-950 mb-2">{detail.title}</h4>
-                <p className="font-body text-sm text-green-700">{detail.text}</p>
+                <p className="font-body text-sm text-green-800">{detail.text}</p>
               </div>
             </ScrollReveal>
           ))}

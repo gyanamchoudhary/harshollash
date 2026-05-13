@@ -28,7 +28,7 @@ export default function ServiceTypesSection({ service }: Props) {
                 <div className="bg-yellow-50 rounded-2xl p-6 lg:p-8 h-full hover:shadow-md transition-all duration-300 hover:-translate-y-1 group">
                   <IconComponent className="w-10 h-10 text-green-800 mb-4 group-hover:scale-110 transition-transform" strokeWidth={1.5} />
                   <h4 className="font-heading text-lg text-green-950 mb-2">{type.title}</h4>
-                  <p className="font-body text-sm text-green-700 leading-relaxed">{type.description}</p>
+                  <p className="font-body text-sm text-green-800 leading-relaxed">{type.description}</p>
                 </div>
               </ScrollReveal>
             );

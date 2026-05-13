@@ -49,7 +49,7 @@ export default function PricingSection() {
                 </div>
                 <p
                   className={`font-body text-sm mb-6 ${
-                    plan.featured ? 'text-white/70' : 'text-green-700'
+                    plan.featured ? 'text-white/85' : 'text-green-800'
                   }`}
                 >
                   {plan.period}
@@ -66,7 +66,7 @@ export default function PricingSection() {
                         />
                         <span
                           className={`font-body text-sm ${
-                            plan.featured ? 'text-white/90' : 'text-green-700'
+                            plan.featured ? 'text-white/90' : 'text-green-800'
                           }`}
                         >
                           {feature}

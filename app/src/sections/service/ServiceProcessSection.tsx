@@ -24,7 +24,7 @@ export default function ServiceProcessSection({ service }: Props) {
                     <span className="font-heading text-xl">{step.number}</span>
                   </div>
                   <h4 className="font-heading text-lg text-green-950 mb-2">{step.title}</h4>
-                  <p className="font-body text-sm text-green-700">{step.description}</p>
+                  <p className="font-body text-sm text-green-800">{step.description}</p>
                 </div>
               </ScrollReveal>
             ))}

@@ -46,7 +46,7 @@ export default function CTASection() {
               <h3 className="font-heading text-xl text-green-950 mb-2">
                 Book a Free Consultation
               </h3>
-              <p className="font-body text-sm text-green-700 mb-6">
+              <p className="font-body text-sm text-green-800 mb-6">
                 Fill out the form and we&apos;ll get back to you shortly.
               </p>
               <form
