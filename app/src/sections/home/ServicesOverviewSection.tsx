@@ -15,17 +15,30 @@ export default function ServicesOverviewSection() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
 
+  const serviceCount = services.length;
+
   // Auto-rotate clockwise
   useEffect(() => {
     if (isPaused) return;
     const interval = setInterval(() => {
-      setActiveIndex((prev) => (prev + 1) % services.length);
+      setActiveIndex((prev) => (prev + 1) % serviceCount);
     }, 3000);
     return () => clearInterval(interval);
-  }, [isPaused]);
+  }, [isPaused, serviceCount]);
 
   // Which card is currently at the top position
-  const topIndex = (services.length - activeIndex) % services.length;
+  const topIndex = (serviceCount - activeIndex) % serviceCount;
+
+  // Generate spoke lines for SVG — static positions based on service count
+  const spokeRadius = 420;
+  const center = 500;
+  const spokes = Array.from({ length: serviceCount }, (_, i) => {
+    const angleDeg = i * (360 / serviceCount) - 90;
+    const angleRad = (angleDeg * Math.PI) / 180;
+    const x2 = center + Math.cos(angleRad) * spokeRadius;
+    const y2 = center + Math.sin(angleRad) * spokeRadius;
+    return { x2, y2, delay: i * 0.6 };
+  });
 
   return (
     <section className="py-20 lg:py-28 bg-white relative overflow-hidden">
@@ -52,24 +65,85 @@ export default function ServicesOverviewSection() {
         {/* Orbit Carousel - Desktop */}
         <ScrollReveal>
           <div
-            className="hidden lg:block relative h-[520px]"
+            className="hidden lg:block relative h-[600px]"
             onMouseEnter={() => setIsPaused(true)}
             onMouseLeave={() => setIsPaused(false)}
           >
-            {/* Center decoration */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 rounded-full bg-gradient-to-br from-yellow-100 to-sage-50 flex items-center justify-center shadow-md z-10">
-              <div className="w-12 h-12 rounded-full bg-gradient-to-br from-yellow-500 to-green-800 flex items-center justify-center">
-                <Heart className="w-6 h-6 text-white" />
+            {/* SVG Chakra Spokes */}
+            <svg
+              className="absolute inset-0 w-full h-full pointer-events-none"
+              viewBox="0 0 1000 1000"
+              preserveAspectRatio="xMidYMid meet"
+            >
+              {/* Outer subtle ring */}
+              <circle
+                cx={center}
+                cy={center}
+                r={spokeRadius}
+                fill="none"
+                stroke="rgba(56, 63, 0, 0.06)"
+                strokeWidth="1"
+                className="animate-spoke-shimmer"
+              />
+              {/* Inner ring */}
+              <circle
+                cx={center}
+                cy={center}
+                r={spokeRadius * 0.65}
+                fill="none"
+                stroke="rgba(56, 63, 0, 0.04)"
+                strokeWidth="1"
+                className="animate-spoke-shimmer"
+                style={{ animationDelay: '1s' }}
+              />
+              {/* Spokes */}
+              {spokes.map((spoke, i) => (
+                <line
+                  key={i}
+                  x1={center}
+                  y1={center}
+                  x2={spoke.x2}
+                  y2={spoke.y2}
+                  stroke="rgba(56, 63, 0, 0.1)"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  className="animate-spoke-shimmer"
+                  style={{ animationDelay: `${spoke.delay}s` }}
+                />
+              ))}
+              {/* Small chakra dots at the end of each spoke */}
+              {spokes.map((spoke, i) => (
+                <circle
+                  key={`dot-${i}`}
+                  cx={spoke.x2}
+                  cy={spoke.y2}
+                  r="4"
+                  fill="rgba(229, 204, 0, 0.2)"
+                  className="animate-spoke-shimmer"
+                  style={{ animationDelay: `${spoke.delay + 0.3}s` }}
+                />
+              ))}
+            </svg>
+
+            {/* Center — Breathing Heart */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 flex flex-col items-center">
+              {/* Outer glow ring */}
+              <div className="absolute w-28 h-28 rounded-full bg-yellow-400/10 animate-glow-pulse" />
+              {/* Pulsing aura ring */}
+              <div className="absolute w-20 h-20 rounded-full bg-gradient-to-br from-yellow-200/30 to-green-200/20 animate-breathe" />
+              {/* Main center circle */}
+              <div className="relative w-16 h-16 rounded-full bg-gradient-to-br from-yellow-500 to-green-800 flex items-center justify-center shadow-lg">
+                <Heart className="w-7 h-7 text-white animate-breathe" fill="white" />
               </div>
+              {/* Label */}
+              <p className="mt-3 font-body text-xs font-medium text-green-800 tracking-wider uppercase">
+                Healing Core
+              </p>
             </div>
 
-            {/* Orbit trail */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[440px] h-[440px] rounded-full border-2 border-green-800/10" />
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[380px] h-[380px] rounded-full border border-green-800/5" />
-
-            {/* Service cards */}
+            {/* Service cards orbiting */}
             {services.map((service, index) => {
-              const angle = (index * (360 / services.length) - 90 + activeIndex * (360 / services.length)) * (Math.PI / 180);
+              const angle = (index * (360 / serviceCount) - 90 + activeIndex * (360 / serviceCount)) * (Math.PI / 180);
               const radius = 220;
               const x = Math.cos(angle) * radius;
               const y = Math.sin(angle) * radius;
