@@ -1,8 +1,8 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import {
   Brain, Flower2, Heart, Scan, Rainbow, Wind, Compass,
-  ChevronLeft, ChevronRight, ArrowRight
+  ArrowRight
 } from 'lucide-react';
 import { services } from '@/data/services';
 import ScrollReveal from '@/components/ScrollReveal';
@@ -13,9 +13,19 @@ const iconMap: Record<string, React.ElementType> = {
 
 export default function ServicesOverviewSection() {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
 
-  const next = () => setActiveIndex((prev) => (prev + 1) % services.length);
-  const prev = () => setActiveIndex((prev) => (prev - 1 + services.length) % services.length);
+  // Auto-rotate clockwise
+  useEffect(() => {
+    if (isPaused) return;
+    const interval = setInterval(() => {
+      setActiveIndex((prev) => (prev + 1) % services.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, [isPaused]);
+
+  // Which card is currently at the top position
+  const topIndex = (services.length - activeIndex) % services.length;
 
   return (
     <section className="py-20 lg:py-28 bg-white relative overflow-hidden">
@@ -41,7 +51,11 @@ export default function ServicesOverviewSection() {
 
         {/* Orbit Carousel - Desktop */}
         <ScrollReveal>
-          <div className="hidden lg:block relative h-[520px]">
+          <div
+            className="hidden lg:block relative h-[520px]"
+            onMouseEnter={() => setIsPaused(true)}
+            onMouseLeave={() => setIsPaused(false)}
+          >
             {/* Center decoration */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 rounded-full bg-gradient-to-br from-yellow-100 to-sage-50 flex items-center justify-center shadow-md z-10">
               <div className="w-12 h-12 rounded-full bg-gradient-to-br from-yellow-500 to-green-800 flex items-center justify-center">
@@ -59,7 +73,7 @@ export default function ServicesOverviewSection() {
               const radius = 220;
               const x = Math.cos(angle) * radius;
               const y = Math.sin(angle) * radius;
-              const isActive = index === 0;
+              const isActive = index === topIndex;
               const IconComponent = iconMap[service.icon] || Heart;
 
               return (
@@ -85,20 +99,6 @@ export default function ServicesOverviewSection() {
                 </Link>
               );
             })}
-
-            {/* Navigation arrows */}
-            <button
-              onClick={prev}
-              className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white border border-green-600/30 flex items-center justify-center hover:bg-green-950 hover:text-white transition-all z-30"
-            >
-              <ChevronLeft className="w-5 h-5" />
-            </button>
-            <button
-              onClick={next}
-              className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white border border-green-600/30 flex items-center justify-center hover:bg-green-950 hover:text-white transition-all z-30"
-            >
-              <ChevronRight className="w-5 h-5" />
-            </button>
           </div>
         </ScrollReveal>
 
