@@ -50,7 +50,7 @@ export default function CourseOverviewSection() {
                 combines theoretical knowledge with extensive practical training, ensuring you
                 graduate with confidence and competence.
               </p>
-              <img
+              <img loading="lazy"
                 src="/images/course-overview-image.jpg"
                 alt="Healing hands with energy"
                 className="w-full rounded-2xl shadow-lg mt-8 object-cover aspect-video"

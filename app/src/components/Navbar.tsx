@@ -8,13 +8,42 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState('');
   const location = useLocation();
+  const isHome = location.pathname === '/';
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // Active section highlighting on home page
+  useEffect(() => {
+    if (!isHome) {
+      setActiveSection('');
+      return;
+    }
+
+    const sections = ['services', 'testimonials', 'about', 'contact'];
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      { rootMargin: '-40% 0px -55% 0px', threshold: 0 }
+    );
+
+    sections.forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+
+    return () => observer.disconnect();
+  }, [isHome]);
 
   useEffect(() => {
     setMobileOpen(false);
@@ -26,22 +55,31 @@ export default function Navbar() {
     return location.pathname.startsWith(href);
   };
 
+  const isSectionActive = (href: string) => {
+    if (!isHome) return false;
+    if (href === '/#services') return activeSection === 'services';
+    if (href === '/#testimonials') return activeSection === 'testimonials';
+    if (href === '/#about') return activeSection === 'about';
+    if (href === '/#contact') return activeSection === 'contact';
+    return false;
+  };
+
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-3 left-4 right-4 z-50 transition-all duration-500 rounded-2xl ${
         scrolled
-          ? 'bg-white/95 backdrop-blur-md shadow-[0_2px_20px_rgba(0,0,0,0.08)]'
+          ? 'bg-white/90 backdrop-blur-xl shadow-[0_8px_32px_rgba(0,0,0,0.08)]'
           : 'bg-transparent'
       }`}
     >
       <div className="max-w-container mx-auto px-4 sm:px-6 lg:px-10">
-        <div className="flex items-center justify-between h-[96px] lg:h-[140px]">
+        <div className="flex items-center justify-between h-20 lg:h-24">
           {/* Logo */}
           <Link to="/" className="flex items-center z-10">
-            <img
-              src="/images/logo.png"
+            <img loading="lazy"
+              src="/images/logo_transparent.png"
               alt="Harshollasha"
-              className="h-[72px] lg:h-24 w-auto object-contain"
+              className="h-16 lg:h-20 w-auto object-contain transition-all duration-300"
             />
           </Link>
 
@@ -81,7 +119,7 @@ export default function Navbar() {
                 ) : (
                   <Link
                     to={item.href}
-                    className={`font-body text-sm font-medium transition-colors py-2 relative ${
+                    className={`font-body text-xs font-medium transition-colors py-2 relative uppercase tracking-[0.12em] ${
                       isActive(item.href)
                         ? scrolled
                           ? 'text-green-800'
@@ -89,9 +127,17 @@ export default function Navbar() {
                         : scrolled
                         ? 'text-green-950 hover:text-green-800'
                         : 'text-white/90 hover:text-white'
-                    } ${isActive(item.href) ? (scrolled ? 'border-b-2 border-green-800' : 'border-b-2 border-white') : ''}`}
+                    }`}
                   >
                     {item.label}
+                    {/* Active indicator dot for pages */}
+                    {isActive(item.href) && (
+                      <span className={`absolute -bottom-0.5 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full ${scrolled ? 'bg-green-800' : 'bg-white'}`} />
+                    )}
+                    {/* Section active indicator for home page */}
+                    {isSectionActive(item.href) && (
+                      <span className={`absolute -bottom-0.5 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full ${scrolled ? 'bg-green-800' : 'bg-white'}`} />
+                    )}
                   </Link>
                 )}
               </div>

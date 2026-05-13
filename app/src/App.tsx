@@ -5,12 +5,15 @@ import Footer from '@/components/Footer';
 import BackToTop from '@/components/BackToTop';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import ConsultationModal from '@/components/ConsultationModal';
+import CookieConsent from '@/components/CookieConsent';
+import ScrollProgress from '@/components/ScrollProgress';
 import HomePage from '@/pages/HomePage';
 import AboutPage from '@/pages/AboutPage';
 import CoursePage from '@/pages/CoursePage';
 import ServiceDetailPage from '@/pages/ServiceDetailPage';
 import BlogPage from '@/pages/BlogPage';
 import ContactPage from '@/pages/ContactPage';
+import NotFoundPage from '@/pages/NotFoundPage';
 
 function ScrollToTop() {
   const { pathname, hash } = useLocation();
@@ -33,6 +36,7 @@ function AppLayout() {
   return (
     <div className="min-h-[100dvh] flex flex-col">
       <ScrollToTop />
+      <ScrollProgress />
       <Navbar />
       <main className="flex-1">
         <Routes>
@@ -42,12 +46,14 @@ function AppLayout() {
           <Route path="/services/:serviceSlug" element={<ServiceDetailPage />} />
           <Route path="/blog" element={<BlogPage />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </main>
       <Footer />
       <BackToTop />
       <WhatsAppButton />
       <ConsultationModal open={consultOpen} onOpenChange={setConsultOpen} />
+      <CookieConsent />
     </div>
   );
 }

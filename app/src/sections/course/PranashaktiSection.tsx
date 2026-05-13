@@ -35,7 +35,7 @@ export default function PranashaktiSection() {
         </ScrollReveal>
 
         <ScrollReveal delay={0.3}>
-          <img
+          <img loading="lazy"
             src="/images/pranashakti-wide.jpg"
             alt="Healer meditating with energy visualization"
             className="w-full rounded-2xl shadow-lg mt-10 object-cover aspect-[21/9]"

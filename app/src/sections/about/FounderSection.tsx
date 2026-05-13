@@ -15,11 +15,13 @@ export default function FounderSection() {
         <div className="grid lg:grid-cols-5 gap-12 items-center">
           {/* Portrait */}
           <ScrollReveal direction="left" className="lg:col-span-2">
-            <img
-              src="/images/guruji-portrait-full.jpg"
-              alt="Harshollasha Guruji - Founder & Spiritual Master"
-              className="w-full rounded-2xl shadow-xl object-cover aspect-[3/4]"
-            />
+            <div className="img-zoom-container rounded-2xl shadow-xl">
+              <img loading="lazy"
+                src="/images/guruji-portrait-full.jpg"
+                alt="Harshollasha Guruji - Founder & Spiritual Master"
+                className="w-full rounded-2xl object-cover aspect-[3/4]"
+              />
+            </div>
           </ScrollReveal>
 
           {/* Bio */}

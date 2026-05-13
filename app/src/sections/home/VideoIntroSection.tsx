@@ -15,13 +15,13 @@ export default function VideoIntroSection() {
         />
         <ScrollReveal delay={0.2} className="mt-12">
           <div
-            className="relative max-w-4xl mx-auto rounded-2xl overflow-hidden shadow-2xl cursor-pointer group"
+            className="relative max-w-4xl mx-auto rounded-2xl overflow-hidden shadow-2xl cursor-pointer group img-zoom-container"
             onClick={() => setIsOpen(true)}
           >
-            <img
+            <img loading="lazy"
               src="/images/video-thumbnail.jpg"
               alt="HARSHOLLASHA Introduction Video"
-              className="w-full aspect-video object-cover group-hover:scale-[1.02] transition-transform duration-500"
+              className="w-full aspect-video object-cover"
             />
             <div className="absolute inset-0 bg-green-950/20 group-hover:bg-green-950/30 transition-colors" />
             <div className="absolute inset-0 flex items-center justify-center">

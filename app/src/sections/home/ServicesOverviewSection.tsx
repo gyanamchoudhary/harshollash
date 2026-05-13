@@ -175,7 +175,7 @@ export default function ServicesOverviewSection() {
                     {/* Counter-rotate so card stays upright */}
                     <div className="animate-counter-rotate">
                       <Link to={`/services/${service.slug}`}>
-                        <div className="w-44 bg-white rounded-xl border border-green-600/20 p-5 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 hover:scale-105">
+                        <div className="w-44 bg-white rounded-xl border border-green-600/20 p-5 shadow-md hover:shadow-xl transition-all cursor-pointer duration-300 hover:-translate-y-1 hover:scale-105">
                           <IconComponent className="w-10 h-10 text-green-800 mb-3" strokeWidth={1.5} />
                           <h3 className="font-heading text-base text-green-950 mb-1">{service.name}</h3>
                           <p className="font-body text-xs text-green-800 leading-relaxed line-clamp-2">
@@ -198,7 +198,7 @@ export default function ServicesOverviewSection() {
             return (
               <Link key={service.slug} to={`/services/${service.slug}`}>
                 <ScrollReveal>
-                  <div className="bg-white rounded-xl border border-green-600/20 p-6 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 group">
+                  <div className="bg-white rounded-xl border border-green-600/20 p-6 shadow-sm hover:shadow-lg transition-all cursor-pointer duration-300 hover:-translate-y-1 group">
                     <IconComponent className="w-10 h-10 text-green-800 mb-4" strokeWidth={1.5} />
                     <h3 className="font-heading text-lg text-green-950 mb-2">{service.name}</h3>
                     <p className="font-body text-sm text-green-800 leading-relaxed">

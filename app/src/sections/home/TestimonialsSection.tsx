@@ -18,7 +18,7 @@ export default function TestimonialsSection() {
         &ldquo;{testimonial.quote}&rdquo;
       </p>
       <div className="flex items-center gap-4">
-        <img
+        <img loading="lazy"
           src={testimonial.avatar}
           alt={testimonial.author}
           className="w-14 h-14 rounded-full object-cover"

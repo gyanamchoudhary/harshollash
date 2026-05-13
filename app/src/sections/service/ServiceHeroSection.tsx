@@ -24,7 +24,7 @@ export default function ServiceHeroSection({ service }: Props) {
   return (
     <section className="relative min-h-[70vh] flex items-end pb-16 lg:pb-24 overflow-hidden">
       <div className="absolute inset-0 z-0">
-        <img
+        <img loading="lazy"
           src={service.heroImage}
           alt={service.name}
           className="w-full h-full object-cover"

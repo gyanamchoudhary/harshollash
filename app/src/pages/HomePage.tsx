@@ -1,4 +1,5 @@
 import HeroSection from '@/sections/home/HeroSection';
+import TrustBar from '@/components/TrustBar';
 import VideoIntroSection from '@/sections/home/VideoIntroSection';
 import CourseFeatureSection from '@/sections/home/CourseFeatureSection';
 import ServicesOverviewSection from '@/sections/home/ServicesOverviewSection';
@@ -11,6 +12,7 @@ export default function HomePage() {
   return (
     <>
       <HeroSection />
+      <TrustBar />
       <VideoIntroSection />
       <CourseFeatureSection />
       <ServicesOverviewSection />

@@ -39,12 +39,12 @@ export default function BlogGridSection() {
           {filtered.map((post, i) => (
             <ScrollReveal key={post.id} delay={i * 0.1}>
               <Link to="#" className="group block">
-                <div className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300">
-                  <div className="relative overflow-hidden aspect-video">
-                    <img
+                <div className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all cursor-pointer duration-300 card-lift">
+                  <div className="relative img-zoom-container aspect-video">
+                    <img loading="lazy"
                       src={post.image}
                       alt={post.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      className="w-full h-full object-cover"
                     />
                   </div>
                   <div className="p-6">

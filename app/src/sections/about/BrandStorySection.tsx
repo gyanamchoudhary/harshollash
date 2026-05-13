@@ -6,11 +6,11 @@ export default function BrandStorySection() {
       <div className="max-w-container mx-auto px-4 sm:px-6 lg:px-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <ScrollReveal direction="left">
-            <div className="relative">
-              <img
+            <div className="relative img-zoom-container rounded-2xl shadow-xl">
+              <img loading="lazy"
                 src="/images/about-story-image.jpg"
                 alt="HARSHOLLASHA Wellness Center"
-                className="w-full rounded-2xl shadow-xl object-cover aspect-[3/4]"
+                className="w-full rounded-2xl object-cover aspect-[3/4]"
               />
               <div className="absolute -bottom-4 -right-4 w-full h-full border-2 border-green-800 rounded-2xl -z-10" />
             </div>

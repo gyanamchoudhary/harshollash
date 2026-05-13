@@ -12,13 +12,13 @@ export default function TeamSection() {
 
         {/* Founder Card */}
         <ScrollReveal className="mt-16">
-          <div className="bg-yellow-50 rounded-3xl p-6 sm:p-10 lg:p-12 shadow-lg max-w-4xl mx-auto">
+          <div className="bg-yellow-50 rounded-3xl p-6 sm:p-10 lg:p-12 shadow-lg max-w-4xl mx-auto card-lift">
             <div className="flex flex-col md:flex-row gap-8 items-center">
-              <div className="w-full md:w-72 flex-shrink-0">
-                <img
+              <div className="w-full md:w-72 flex-shrink-0 img-zoom-container rounded-2xl shadow-md">
+                <img loading="lazy"
                   src={founder.image}
                   alt={founder.name}
-                  className="w-full aspect-[3/4] object-cover rounded-2xl shadow-md"
+                  className="w-full aspect-[3/4] object-cover rounded-2xl"
                 />
               </div>
               <div className="flex-1 text-center md:text-left">
@@ -51,12 +51,12 @@ export default function TeamSection() {
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mt-16">
           {teamMembers.map((member, i) => (
             <ScrollReveal key={member.name} delay={i * 0.1}>
-              <div className="bg-white rounded-2xl border border-green-600/20 p-6 text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1 group">
-                <div className="w-24 h-24 lg:w-28 lg:h-28 mx-auto rounded-full overflow-hidden mb-4 ring-4 ring-yellow-50 group-hover:ring-yellow-200 transition-all">
-                  <img
+              <div className="bg-white rounded-2xl border border-green-600/20 p-6 text-center hover:shadow-lg transition-all cursor-pointer duration-300 hover:-translate-y-1 group">
+                <div className="w-24 h-24 lg:w-28 lg:h-28 mx-auto rounded-full overflow-hidden mb-4 ring-4 ring-yellow-50 group-hover:ring-yellow-200 transition-all img-zoom-container">
+                  <img loading="lazy"
                     src={member.image}
                     alt={member.name}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    className="w-full h-full object-cover"
                   />
                 </div>
                 <h4 className="font-heading text-lg text-green-950 mb-1">{member.name}</h4>

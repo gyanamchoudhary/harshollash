@@ -13,11 +13,11 @@ export default function CourseFeatureSection() {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left: Image */}
           <ScrollReveal direction="left">
-            <div className="relative">
-              <img
+            <div className="relative img-zoom-container rounded-2xl shadow-xl">
+              <img loading="lazy"
                 src="/images/course-feature-image.jpg"
                 alt="Pranashakti Healing Course"
-                className="w-full rounded-2xl shadow-xl object-cover aspect-[4/3]"
+                className="w-full rounded-2xl object-cover aspect-[4/3]"
               />
               {/* Floating certification badge */}
               <div className="absolute -bottom-6 -right-4 lg:-right-8 bg-white rounded-full w-28 h-28 lg:w-32 lg:h-32 shadow-lg border-4 border-green-800 flex flex-col items-center justify-center text-center p-3 animate-float">

@@ -58,8 +58,8 @@ module.exports = {
         'sage-50': '#E5E5C9',
       },
       fontFamily: {
-        'heading': ['"Playfair Display"', 'serif'],
-        'body': ['"Poppins"', 'sans-serif'],
+        'heading': ['"Cormorant"', 'serif'],
+        'body': ['"Montserrat"', 'sans-serif'],
         'script': ['"Satisfy"', 'cursive'],
       },
       maxWidth: {

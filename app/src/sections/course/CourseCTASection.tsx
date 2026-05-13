@@ -15,7 +15,7 @@ export default function CourseCTASection() {
 
         <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto mt-12">
           <ScrollReveal>
-            <div className="bg-white rounded-2xl p-8 shadow-md border border-green-600/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+            <div className="bg-white rounded-2xl p-8 shadow-md border border-green-600/20 hover:shadow-xl transition-all cursor-pointer duration-300 hover:-translate-y-2">
               <h3 className="font-heading text-xl text-green-950 mb-2">Online Class</h3>
               <p className="font-heading text-3xl text-green-950 mb-4">INR 21,000</p>
               <p className="font-body text-xs text-green-800 mb-6">

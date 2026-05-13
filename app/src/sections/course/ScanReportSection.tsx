@@ -14,7 +14,7 @@ export default function ScanReportSection() {
       <div className="max-w-container mx-auto px-4 sm:px-6 lg:px-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <ScrollReveal direction="left">
-            <img
+            <img loading="lazy"
               src="/images/scan-report-sample.jpg"
               alt="Energy Scan Report"
               className="w-full rounded-2xl shadow-xl object-cover"
