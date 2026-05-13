@@ -103,10 +103,28 @@
 
 @keyframes spoke-shimmer {
   0%, 100% {
-    opacity: 0.08;
+    opacity: 0.15;
   }
   50% {
-    opacity: 0.2;
+    opacity: 0.35;
+  }
+}
+
+@keyframes orbit-rotate {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes counter-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
   }
 }
 
@@ -120,4 +138,17 @@
 
 .animate-spoke-shimmer {
   animation: spoke-shimmer 4s ease-in-out infinite;
+}
+
+.animate-orbit {
+  animation: orbit-rotate 35s linear infinite;
+}
+
+.animate-counter-rotate {
+  animation: counter-rotate 35s linear infinite;
+}
+
+.orbit-paused .animate-orbit,
+.orbit-paused .animate-counter-rotate {
+  animation-play-state: paused;
 }
