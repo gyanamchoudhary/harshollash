@@ -1,5 +1,5 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { useState } from 'react';
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import BackToTop from '@/components/BackToTop';
@@ -12,11 +12,20 @@ import ServiceDetailPage from '@/pages/ServiceDetailPage';
 import BlogPage from '@/pages/BlogPage';
 import ContactPage from '@/pages/ContactPage';
 
+function ScrollToTop() {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  return null;
+}
+
 function AppLayout() {
   const [consultOpen, setConsultOpen] = useState(false);
 
   return (
     <div className="min-h-[100dvh] flex flex-col">
+      <ScrollToTop />
       <Navbar />
       <main className="flex-1">
         <Routes>
