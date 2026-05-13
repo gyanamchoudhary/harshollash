@@ -221,10 +221,23 @@
   }
 }
 
+@keyframes bounce-elegant {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
 .animate-ping-slow {
   animation: ping-slow 3s cubic-bezier(0, 0, 0.2, 1) infinite;
 }
 
 .animate-pulse-gentle {
   animation: pulse-gentle 3s ease-in-out infinite;
+}
+
+.animate-bounce-elegant {
+  animation: bounce-elegant 1.8s ease-in-out infinite;
 }
