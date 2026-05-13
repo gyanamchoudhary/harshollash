@@ -17,9 +17,9 @@ export default function CourseHeroSection() {
   }, []);
 
   return (
-    <section className="relative min-h-[85vh] flex items-center bg-green-950 overflow-hidden">
+    <section className="relative min-h-[85vh] flex items-center bg-[#1a1a0e] overflow-hidden">
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-yellow-500/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-green-800/30 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-yellow-500/10 rounded-full blur-3xl" />
 
       <div className="max-w-container mx-auto px-4 sm:px-6 lg:px-10 w-full pt-24 pb-12 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">

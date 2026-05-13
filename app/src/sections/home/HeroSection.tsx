@@ -27,13 +27,13 @@ export default function HeroSection() {
           alt="Serene mountain landscape at golden hour"
           className="w-full h-full object-cover scale-x-[-1]"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-green-950/50 via-green-950/40 to-green-950/80" />
-        <div className="absolute inset-0 bg-gradient-to-r from-green-950/60 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#1a1a0e]/55 via-[#1a1a0e]/35 to-[#1a1a0e]/80" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#1a1a0e]/65 via-transparent to-transparent" />
       </div>
 
       {/* Decorative shapes */}
       <div className="absolute top-20 right-0 w-[400px] h-[400px] bg-yellow-500/10 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-green-700/20 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-yellow-500/10 rounded-full blur-3xl pointer-events-none" />
 
       {/* Content */}
       <div className="relative z-10 max-w-container mx-auto px-4 sm:px-6 lg:px-10 w-full pt-32 pb-20">

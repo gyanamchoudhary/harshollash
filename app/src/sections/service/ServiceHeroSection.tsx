@@ -29,7 +29,7 @@ export default function ServiceHeroSection({ service }: Props) {
           alt={service.name}
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-green-950 via-green-950/60 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#1a1a0e] via-[#1a1a0e]/60 to-transparent" />
       </div>
 
       <div className="max-w-container mx-auto px-4 sm:px-6 lg:px-10 w-full relative z-10 pt-32">
