@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 72 100% 12%;
+    --card: 0 0% 100%;
+    --card-foreground: 72 100% 12%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 72 100% 12%;
+    --primary: 72 100% 12%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 50 100% 96%;
+    --secondary-foreground: 72 100% 12%;
+    --muted: 50 100% 96%;
+    --muted-foreground: 72 20% 30%;
+    --accent: 50 100% 46%;
+    --accent-foreground: 72 100% 12%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 72 20% 50%;
+    --input: 0 0% 82%;
+    --ring: 72 100% 25%;
+    --radius: 0.5rem;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    color: #383F00;
+    background-color: #FFFFFF;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5 {
+    font-family: 'Playfair Display', serif;
+  }
+
+  ::selection {
+    background-color: rgba(229, 204, 0, 0.3);
+    color: #383F00;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}

@@ -1,0 +1,450 @@
+{
+  "assets": [
+    {
+      "id": "logo-wordmark",
+      "type": "svg",
+      "file": "logo-wordmark.svg",
+      "description": "HARSHOLLASHA wordmark logo with circular brand symbol (yellow and green intertwined leaf/swirl) and 'HARSHOLLASHA' text in Playfair Display. Dark variant (#383F00). 200x60px.",
+      "page": "Global",
+      "generate": false
+    },
+    {
+      "id": "logo-wordmark-white",
+      "type": "svg",
+      "file": "logo-wordmark-white.svg",
+      "description": "White variant of the wordmark logo for dark backgrounds (footer, hero overlay).",
+      "page": "Global",
+      "generate": false
+    },
+    {
+      "id": "logo-symbol",
+      "type": "svg",
+      "file": "logo-symbol.svg",
+      "description": "Circular brand symbol only (without wordmark) - intertwined yellow (#E5CC00) and green (#5F6B00) leaf/swirl motif. Used as favicon and nav icon. 40x40px.",
+      "page": "Global",
+      "generate": false
+    },
+    {
+      "id": "icon-meditation",
+      "type": "svg",
+      "file": "icon-meditation.svg",
+      "description": "Line-art icon of a person in lotus meditation position with radiating energy lines. 48x48px, 1.5px stroke, #5F6B00.",
+      "page": "Home (Services)",
+      "generate": false
+    },
+    {
+      "id": "icon-yoga",
+      "type": "svg",
+      "file": "icon-yoga.svg",
+      "description": "Line-art icon of a person in yoga tree pose (vrksasana) with balanced energy. 48x48px, 1.5px stroke, #5F6B00.",
+      "page": "Home (Services)",
+      "generate": false
+    },
+    {
+      "id": "icon-healing",
+      "type": "svg",
+      "file": "icon-healing.svg",
+      "description": "Line-art icon of two hands with energy flowing between them, healing rays. 48x48px, 1.5px stroke, #5F6B00.",
+      "page": "Home (Services)",
+      "generate": false
+    },
+    {
+      "id": "icon-energy-scanning",
+      "type": "svg",
+      "file": "icon-energy-scanning.svg",
+      "description": "Line-art icon of a human silhouette with chakra points and scanning waves. 48x48px, 1.5px stroke, #5F6B00.",
+      "page": "Home (Services)",
+      "generate": false
+    },
+    {
+      "id": "icon-aura-reading",
+      "type": "svg",
+      "file": "icon-aura-reading.svg",
+      "description": "Line-art icon of a person surrounded by colorful auric layers. 48x48px, 1.5px stroke, #5F6B00.",
+      "page": "Home (Services)",
+      "generate": false
+    },
+    {
+      "id": "icon-breathwork",
+      "type": "svg",
+      "file": "icon-breathwork.svg",
+      "description": "Line-art icon of lungs with flowing air/energy lines. 48x48px, 1.5px stroke, #5F6B00.",
+      "page": "Home (Services)",
+      "generate": false
+    },
+    {
+      "id": "icon-spiritual-coaching",
+      "type": "svg",
+      "file": "icon-spiritual-coaching.svg",
+      "description": "Line-art icon of a guiding hand with a path/light leading forward. 48x48px, 1.5px stroke, #5F6B00.",
+      "page": "Home (Services)",
+      "generate": false
+    },
+    {
+      "id": "organic-shape-1",
+      "type": "svg",
+      "file": "organic-shape-1.svg",
+      "description": "Abstract organic blob shape, 600x600px, soft sage green (#E5E5C9) and cream (#FFFCED) flowing fluid form. Transparent background.",
+      "page": "Home (Hero)",
+      "generate": false
+    },
+    {
+      "id": "organic-shape-2",
+      "type": "svg",
+      "file": "organic-shape-2.svg",
+      "description": "Abstract organic blob shape, 800x600px, soft blue (#E6F2F3) and peach (#FDE8E0) flowing forms. Transparent background.",
+      "page": "Home (Services)",
+      "generate": false
+    },
+    {
+      "id": "organic-shape-3",
+      "type": "svg",
+      "file": "organic-shape-3.svg",
+      "description": "Abstract organic blob shape, 600x800px, warm yellow (#FFF9D9) and cream flowing forms. Transparent background.",
+      "page": "Home (Testimonials)",
+      "generate": false
+    },
+    {
+      "id": "organic-shape-hero-1",
+      "type": "svg",
+      "file": "organic-shape-hero-1.svg",
+      "description": "Abstract organic blob shape, 600x600px, soft sage green (#E5E5C9) and warm cream (#FFFCED) flowing fluid form. Transparent background. Top-right corner accent.",
+      "page": "Home (Hero)",
+      "generate": false
+    },
+    {
+      "id": "organic-shape-hero-2",
+      "type": "svg",
+      "file": "organic-shape-hero-2.svg",
+      "description": "Abstract organic blob shape, 400x400px, soft peach (#FDE8E0) and pale yellow (#FFF9D9) flowing fluid form. Transparent background. Bottom-left corner accent.",
+      "page": "Home (Hero)",
+      "generate": false
+    },
+    {
+      "id": "icon-compassion",
+      "type": "svg",
+      "file": "icon-compassion.svg",
+      "description": "Heart icon, 48x48px, line-art style, 1.5px stroke, #5F6B00. For About Philosophy section.",
+      "page": "About",
+      "generate": false
+    },
+    {
+      "id": "icon-authenticity",
+      "type": "svg",
+      "file": "icon-authenticity.svg",
+      "description": "Leaf/nature icon, 48x48px, line-art style, 1.5px stroke, #5F6B00. For About Philosophy section.",
+      "page": "About",
+      "generate": false
+    },
+    {
+      "id": "icon-transformation",
+      "type": "svg",
+      "file": "icon-transformation.svg",
+      "description": "Star/sparkle icon, 48x48px, line-art style, 1.5px stroke, #5F6B00. For About Philosophy section.",
+      "page": "About",
+      "generate": false
+    },
+    {
+      "id": "icon-mission",
+      "type": "svg",
+      "file": "icon-mission.svg",
+      "description": "Target/bullseye icon, 56x56px, line-art style, 1.5px stroke, #5F6B00. For About Mission section.",
+      "page": "About",
+      "generate": false
+    },
+    {
+      "id": "icon-vision",
+      "type": "svg",
+      "file": "icon-vision.svg",
+      "description": "Eye/vision icon, 56x56px, line-art style, 1.5px stroke, #5F6B00. For About Vision section.",
+      "page": "About",
+      "generate": false
+    },
+    {
+      "id": "icon-globe",
+      "type": "svg",
+      "file": "icon-globe.svg",
+      "description": "Globe/world icon, 48x48px, line-art style, 1.5px stroke, #5F6B00. For Course certification section.",
+      "page": "Course",
+      "generate": false
+    },
+    {
+      "id": "icon-briefcase",
+      "type": "svg",
+      "file": "icon-briefcase.svg",
+      "description": "Briefcase icon, 48x48px, line-art style, 1.5px stroke, #5F6B00. For Course certification section.",
+      "page": "Course",
+      "generate": false
+    },
+    {
+      "id": "icon-trending",
+      "type": "svg",
+      "file": "icon-trending.svg",
+      "description": "Trending up/chart icon, 48x48px, line-art style, 1.5px stroke, #5F6B00. For Course certification section.",
+      "page": "Course",
+      "generate": false
+    },
+    {
+      "id": "hero-background",
+      "type": "image",
+      "file": "hero-background.jpg",
+      "description": "1920x1080px. Full-screen hero background. A serene, wide-angle photograph of a person meditating in lotus position on a mountain ledge at golden hour, with Himalayan mountain ranges in background, soft golden sunlight creating warm ethereal glow. Cinematic, peaceful, awe-inspiring.",
+      "page": "Home",
+      "generate": true
+    },
+    {
+      "id": "video-thumbnail",
+      "type": "image",
+      "file": "video-thumbnail.jpg",
+      "description": "1920x1080px, 16:9. Serene image of a person meditating in lotus position at sunrise/sunset, golden light, mountains or nature in background. Soft warm lighting with golden hour glow.",
+      "page": "Home (Video)",
+      "generate": true
+    },
+    {
+      "id": "course-feature-image",
+      "type": "image",
+      "file": "course-feature-image.jpg",
+      "description": "800x600px, 4:3. A healing session in a serene wellness studio. A practitioner in white attire performing energy healing on a client lying on a treatment table. Soft warm lighting, natural elements like plants and candles, peaceful atmosphere. Earthy warm tones with sage green accents.",
+      "page": "Home (Course Feature)",
+      "generate": true
+    },
+    {
+      "id": "founder-portrait",
+      "type": "image",
+      "file": "founder-portrait.jpg",
+      "description": "600x800px, 3:4. A dignified South Asian spiritual master in his 50s, wearing traditional saffron/white robes, serene expression, sitting in meditation posture. Warm golden lighting, blurred natural background with greenery. Peaceful, wise, compassionate aura.",
+      "page": "Home (Team)",
+      "generate": true
+    },
+    {
+      "id": "team-member-1",
+      "type": "image",
+      "file": "team-member-1.jpg",
+      "description": "480x480px, 1:1. South Asian male yoga instructor in his 30s, athletic build, wearing yoga attire, warm smile, performing a yoga pose. Natural lighting, studio background.",
+      "page": "Home (Team)",
+      "generate": true
+    },
+    {
+      "id": "team-member-2",
+      "type": "image",
+      "file": "team-member-2.jpg",
+      "description": "480x480px, 1:1. South Asian female healer in her 40s, gentle expression, wearing white healing attire. Soft lighting, wellness studio background.",
+      "page": "Home (Team)",
+      "generate": true
+    },
+    {
+      "id": "team-member-3",
+      "type": "image",
+      "file": "team-member-3.jpg",
+      "description": "480x480px, 1:1. South Asian male meditation teacher in his 50s, calm expression, wearing simple traditional clothing, sitting peacefully. Natural lighting, garden or nature background.",
+      "page": "Home (Team)",
+      "generate": true
+    },
+    {
+      "id": "team-member-4",
+      "type": "image",
+      "file": "team-member-4.jpg",
+      "description": "480x480px, 1:1. South Asian female wellness coach in her 30s, confident smile, wearing professional wellness attire. Bright, modern wellness studio background.",
+      "page": "Home (Team)",
+      "generate": true
+    },
+    {
+      "id": "testimonial-avatar-1",
+      "type": "image",
+      "file": "testimonial-avatar-1.jpg",
+      "description": "240x240px, 1:1. Portrait of a South Asian woman in her 30s, warm smile, natural lighting, soft background blur. Professional headshot style.",
+      "page": "Home (Testimonials)",
+      "generate": true
+    },
+    {
+      "id": "testimonial-avatar-2",
+      "type": "image",
+      "file": "testimonial-avatar-2.jpg",
+      "description": "240x240px, 1:1. Portrait of a South Asian man in his 40s, confident expression, business casual attire, natural lighting.",
+      "page": "Home (Testimonials)",
+      "generate": true
+    },
+    {
+      "id": "testimonial-avatar-3",
+      "type": "image",
+      "file": "testimonial-avatar-3.jpg",
+      "description": "240x240px, 1:1. Portrait of a South Asian woman in her 20s, serene expression, yoga attire, natural lighting.",
+      "page": "Home (Testimonials)",
+      "generate": true
+    },
+    {
+      "id": "testimonial-avatar-4",
+      "type": "image",
+      "file": "testimonial-avatar-4.jpg",
+      "description": "240x240px, 1:1. Portrait of a South Asian man in his 30s, warm smile, casual attire, outdoor background.",
+      "page": "Home (Testimonials)",
+      "generate": true
+    },
+    {
+      "id": "testimonial-avatar-5",
+      "type": "image",
+      "file": "testimonial-avatar-5.jpg",
+      "description": "240x240px, 1:1. Portrait of a South Asian woman in her 40s, gentle smile, professional attire, soft lighting.",
+      "page": "Home (Testimonials)",
+      "generate": true
+    },
+    {
+      "id": "about-story-image",
+      "type": "image",
+      "file": "about-story-image.jpg",
+      "description": "600x800px, 3:4. A serene ashram or wellness center exterior surrounded by lush greenery, traditional Indian architecture with modern wellness elements, morning mist, warm golden light. Peaceful and inviting atmosphere.",
+      "page": "About",
+      "generate": true
+    },
+    {
+      "id": "guruji-portrait-full",
+      "type": "image",
+      "file": "guruji-portrait-full.jpg",
+      "description": "600x800px, 3:4. Full portrait of a South Asian spiritual master in his 50s, wearing elegant saffron and white traditional robes, serene and wise expression, gentle smile. Standing with hands in blessing gesture (namaste). Warm golden lighting, blurred temple or nature background. Dignified, peaceful, authoritative presence.",
+      "page": "About",
+      "generate": true
+    },
+    {
+      "id": "course-hero-preview",
+      "type": "image",
+      "file": "course-hero-preview.jpg",
+      "description": "600x400px, 3:2. A group healing class in progress, multiple students sitting in a circle with a master healer in center, hands raised with visible energy flow visualization, warm studio lighting, serene environment. Professional, transformative atmosphere.",
+      "page": "Course",
+      "generate": true
+    },
+    {
+      "id": "course-overview-image",
+      "type": "image",
+      "file": "course-overview-image.jpg",
+      "description": "800x450px, 16:9. Close-up of hands performing energy healing, subtle light effects suggesting energy flow between palms, warm golden lighting, blurred peaceful background. Professional, mystical yet grounded.",
+      "page": "Course",
+      "generate": true
+    },
+    {
+      "id": "pranashakti-wide",
+      "type": "image",
+      "file": "pranashakti-wide.jpg",
+      "description": "1200x514px, 21:9 cinematic. A healer sitting in meditation in a sacred space, energy visualization effects (subtle golden light rays emanating from body), ancient Indian architectural elements, incense smoke, warm golden lighting. Mystical, serene, powerful.",
+      "page": "Course",
+      "generate": true
+    },
+    {
+      "id": "scan-report-sample",
+      "type": "image",
+      "file": "scan-report-sample.jpg",
+      "description": "600x800px, 3:4. Detailed energy scan report visualization showing human body silhouette with colored chakra points (7 chakras in rainbow colors), energy flow lines, numerical readings, summary chart. Clean infographic style with earthy green and gold color scheme. Professional medical-spiritual hybrid aesthetic.",
+      "page": "Course",
+      "generate": true
+    },
+    {
+      "id": "hero-meditation",
+      "type": "image",
+      "file": "hero-meditation.jpg",
+      "description": "1920x1080px. A serene meditation scene - person sitting in perfect lotus position in peaceful natural setting, morning mist, soft golden light filtering through trees, mountains in background. Ultra-calm, ethereal atmosphere.",
+      "page": "Service: Meditation",
+      "generate": true
+    },
+    {
+      "id": "hero-yoga",
+      "type": "image",
+      "file": "hero-yoga.jpg",
+      "description": "1920x1080px. A person performing an advanced yoga asana (warrior pose or backbend) outdoors at sunrise, golden lighting, natural landscape background, demonstrating strength and grace. Dynamic yet peaceful.",
+      "page": "Service: Yoga",
+      "generate": true
+    },
+    {
+      "id": "hero-healing",
+      "type": "image",
+      "file": "hero-healing.jpg",
+      "description": "1920x1080px. A healing session in progress - practitioner with hands hovering over a relaxed client, warm soft lighting, energy visualization (subtle golden glow between hands), peaceful studio setting.",
+      "page": "Service: Healing",
+      "generate": true
+    },
+    {
+      "id": "hero-energy-scanning",
+      "type": "image",
+      "file": "hero-energy-scanning.jpg",
+      "description": "1920x1080px. A practitioner scanning a client's energy field with hands, subtle visualization of energy waves and chakra points (soft colored light effects), modern wellness studio, professional and scientific yet spiritual.",
+      "page": "Service: Energy Scanning",
+      "generate": true
+    },
+    {
+      "id": "hero-aura-reading",
+      "type": "image",
+      "file": "hero-aura-reading.jpg",
+      "description": "1920x1080px. A person surrounded by colorful auric layers (soft translucent colored halos - blue, green, purple, gold), mystical yet grounded atmosphere, warm lighting, sacred space setting.",
+      "page": "Service: Aura Reading",
+      "generate": true
+    },
+    {
+      "id": "hero-breathwork",
+      "type": "image",
+      "file": "hero-breathwork.jpg",
+      "description": "1920x1080px. A person practicing conscious breathing outdoors, chest expanded, sunrise lighting, nature background (ocean or mountains), feeling of vitality and connection with nature.",
+      "page": "Service: Breathwork",
+      "generate": true
+    },
+    {
+      "id": "hero-spiritual-coaching",
+      "type": "image",
+      "file": "hero-spiritual-coaching.jpg",
+      "description": "1920x1080px. A one-on-one spiritual coaching session - coach and seeker sitting facing each other in a sacred space, warm lighting, spiritual books and elements in background, atmosphere of guidance and wisdom.",
+      "page": "Service: Spiritual Coaching",
+      "generate": true
+    },
+    {
+      "id": "blog-1",
+      "type": "image",
+      "file": "blog-1.jpg",
+      "description": "800x450px, 16:9. Abstract visualization of energy flow through a human body, golden light streams, chakra points glowing, warm ethereal atmosphere. Illustration style.",
+      "page": "Blog",
+      "generate": true
+    },
+    {
+      "id": "blog-2",
+      "type": "image",
+      "file": "blog-2.jpg",
+      "description": "800x450px, 16:9. A person meditating peacefully in a sunlit room, morning light, plants in background, calm and serene. Warm, inviting photography.",
+      "page": "Blog",
+      "generate": true
+    },
+    {
+      "id": "blog-3",
+      "type": "image",
+      "file": "blog-3.jpg",
+      "description": "800x450px, 16:9. A person performing kundalini yoga in a beautiful outdoor setting, sunrise, dynamic pose with energy visualization. Powerful yet peaceful.",
+      "page": "Blog",
+      "generate": true
+    },
+    {
+      "id": "blog-4",
+      "type": "image",
+      "file": "blog-4.jpg",
+      "description": "800x450px, 16:9. Hands performing energy scanning over a body, subtle light effects showing energy field, professional wellness studio setting.",
+      "page": "Blog",
+      "generate": true
+    },
+    {
+      "id": "blog-5",
+      "type": "image",
+      "file": "blog-5.jpg",
+      "description": "800x450px, 16:9. A silhouette of a person standing on a mountaintop with arms raised, surrounded by golden light, clouds below. Spiritual awakening imagery.",
+      "page": "Blog",
+      "generate": true
+    },
+    {
+      "id": "blog-6",
+      "type": "image",
+      "file": "blog-6.jpg",
+      "description": "800x450px, 16:9. Colorful auric layers surrounding a peaceful meditating figure, rainbow energy field, mystical yet grounded atmosphere.",
+      "page": "Blog",
+      "generate": true
+    }
+  ],
+  "summary": {
+    "total": 52,
+    "svg": 22,
+    "image": 30,
+    "toGenerate": 30
+  }
+}

@@ -1,0 +1,66 @@
+import { BlogPost } from '@/types';
+
+export const blogPosts: BlogPost[] = [
+  {
+    id: 1,
+    title: 'Understanding Pranashakti: The Science of Life Force Energy',
+    excerpt: 'Discover the ancient wisdom behind Pranashakti healing and how this powerful life force energy can transform your physical, emotional, and spiritual well-being.',
+    category: 'Healing',
+    image: '/images/blog-1.jpg',
+    date: 'Jan 15, 2025',
+    readTime: '5 min read',
+    slug: 'understanding-pranashakti',
+  },
+  {
+    id: 2,
+    title: '5 Meditation Techniques for Beginners to Find Inner Peace',
+    excerpt: 'Starting your meditation journey can feel overwhelming. Here are five proven techniques that will help you cultivate mindfulness and tranquility from day one.',
+    category: 'Meditation',
+    image: '/images/blog-2.jpg',
+    date: 'Jan 10, 2025',
+    readTime: '7 min read',
+    slug: 'meditation-techniques-beginners',
+  },
+  {
+    id: 3,
+    title: 'The Healing Power of Kundalini Yoga: A Complete Guide',
+    excerpt: 'Explore how Kundalini yoga awakens your dormant spiritual energy through dynamic movements, breathwork, and meditation practices passed down through generations.',
+    category: 'Yoga',
+    image: '/images/blog-3.jpg',
+    date: 'Jan 5, 2025',
+    readTime: '8 min read',
+    slug: 'kundalini-yoga-guide',
+  },
+  {
+    id: 4,
+    title: 'How Energy Scanning Can Transform Your Health',
+    excerpt: 'Learn how modern energy scanning techniques combined with ancient wisdom can provide deep insights into your body\'s subtle energy systems and guide your healing.',
+    category: 'Wellness',
+    image: '/images/blog-4.jpg',
+    date: 'Dec 28, 2024',
+    readTime: '6 min read',
+    slug: 'energy-scanning-health',
+  },
+  {
+    id: 5,
+    title: 'Signs You\'re Experiencing a Spiritual Awakening',
+    excerpt: 'Are you going through a spiritual transformation? Learn to recognize the signs of awakening and how to navigate this profound journey with grace and clarity.',
+    category: 'Spirituality',
+    image: '/images/blog-5.jpg',
+    date: 'Dec 20, 2024',
+    readTime: '5 min read',
+    slug: 'spiritual-awakening-signs',
+  },
+  {
+    id: 6,
+    title: 'Aura Colors and Their Meanings: A Comprehensive Guide',
+    excerpt: 'Every color in your aura tells a story about your emotional, physical, and spiritual state. Discover what your aura colors reveal about your inner world.',
+    category: 'Healing',
+    image: '/images/blog-6.jpg',
+    date: 'Dec 15, 2024',
+    readTime: '10 min read',
+    slug: 'aura-colors-meanings',
+  },
+];
+
+export const blogCategories = ['All', 'Wellness', 'Yoga', 'Meditation', 'Healing', 'Spirituality'];
