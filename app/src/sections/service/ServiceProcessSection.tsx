@@ -16,7 +16,7 @@ export default function ServiceProcessSection({ service }: Props) {
           {/* Connecting line - desktop */}
           <div className="hidden lg:block absolute top-7 left-[12%] right-[12%] h-0.5 bg-green-800/20" />
 
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8">
             {service.process.map((step, i) => (
               <ScrollReveal key={step.number} delay={i * 0.15}>
                 <div className="text-center relative">

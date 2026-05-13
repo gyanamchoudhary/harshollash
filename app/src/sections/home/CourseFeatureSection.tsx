@@ -22,13 +22,13 @@ export default function CourseFeatureSection() {
                 />
               </div>
               {/* Floating certification badge */}
-              <div className="absolute -bottom-6 -right-4 lg:-right-8 bg-white rounded-full w-28 h-28 lg:w-32 lg:h-32 shadow-lg border-4 border-green-800 flex flex-col items-center justify-center text-center p-3 animate-float">
-                <Award className="w-6 h-6 text-yellow-600 mb-1" />
-                <span className="font-body text-[9px] lg:text-[10px] font-semibold text-green-800 leading-tight">
+              <div className="absolute -bottom-4 sm:-bottom-6 -right-2 sm:-right-4 lg:-right-8 bg-white rounded-full w-24 h-24 sm:w-28 sm:h-28 lg:w-32 lg:h-32 shadow-lg border-4 border-green-800 flex flex-col items-center justify-center text-center p-2 sm:p-3 animate-float">
+                <Award className="w-5 h-5 sm:w-6 sm:h-6 text-yellow-600 mb-1" />
+                <span className="font-body text-[10px] sm:text-[11px] lg:text-xs font-semibold text-green-800 leading-tight">
                   Certified by
                 </span>
-                <span className="font-body text-[8px] lg:text-[9px] text-green-800">
-                  Pranashakti USA, Inc.
+                <span className="font-body text-[9px] sm:text-[10px] lg:text-xs text-green-800">
+                  Pranashakti USA
                 </span>
               </div>
             </div>
@@ -51,18 +51,18 @@ export default function CourseFeatureSection() {
             </ScrollReveal>
 
             <ScrollReveal delay={0.2}>
-              <div className="grid grid-cols-3 gap-6 mt-8">
+              <div className="grid grid-cols-3 gap-3 sm:gap-6 mt-8">
                 {[
-                  { icon: Clock, value: '27', label: 'Hours of Training' },
-                  { icon: Users, value: '100+', label: 'Certified Graduates' },
-                  { icon: Award, value: 'USA', label: 'Certification' },
+                  { icon: Clock, value: '27', label: 'Hours' },
+                  { icon: Users, value: '100+', label: 'Graduates' },
+                  { icon: Award, value: 'USA', label: 'Certified' },
                 ].map(({ icon: Icon, value, label }) => (
                   <div key={label} className="text-center lg:text-left">
-                    <div className="flex items-center justify-center lg:justify-start mb-2">
-                      <Icon className="w-5 h-5 text-green-800 mr-2" />
-                      <span className="font-heading text-2xl lg:text-3xl text-green-950">{value}</span>
+                    <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start mb-1 sm:mb-2">
+                      <Icon className="w-4 h-4 sm:w-5 sm:h-5 text-green-800 sm:mr-2 mb-1 sm:mb-0" />
+                      <span className="font-heading text-xl sm:text-2xl lg:text-3xl text-green-950">{value}</span>
                     </div>
-                    <p className="font-body text-xs text-green-800">{label}</p>
+                    <p className="font-body text-[10px] sm:text-xs text-green-800">{label}</p>
                   </div>
                 ))}
               </div>

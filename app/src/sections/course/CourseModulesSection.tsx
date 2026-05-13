@@ -41,7 +41,7 @@ export default function CourseModulesSection() {
                 </button>
                 <div
                   className={`overflow-hidden transition-all duration-300 ${
-                    openIndex === i ? 'max-h-48' : 'max-h-0'
+                    openIndex === i ? 'max-h-[500px]' : 'max-h-0'
                   }`}
                 >
                   <div className="px-5 pb-5 pl-16">

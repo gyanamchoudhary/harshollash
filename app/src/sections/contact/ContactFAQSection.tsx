@@ -28,7 +28,7 @@ export default function ContactFAQSection() {
                 </button>
                 <div
                   className={`overflow-hidden transition-all duration-300 ${
-                    openIndex === i ? 'max-h-64' : 'max-h-0'
+                    openIndex === i ? 'max-h-[500px]' : 'max-h-0'
                   }`}
                 >
                   <div className="px-5 pb-5">

@@ -53,20 +53,20 @@ export default function CourseHeroSection() {
             </Link>
           </div>
 
-          <div className="hidden lg:block">
+          <div className="hidden md:block">
             <div className="bg-white rounded-2xl overflow-hidden shadow-2xl card-lift">
               <div className="img-zoom-container">
                 <img loading="lazy"
                   src="/images/course-hero-preview.jpg"
                   alt="Pranashakti Healing Course"
-                  className="w-full h-64 object-cover"
+                  className="w-full h-48 lg:h-64 object-cover"
                 />
               </div>
-              <div className="p-4 flex items-center gap-4 text-xs font-body text-green-800 bg-yellow-50">
+              <div className="p-3 lg:p-4 flex items-center gap-3 lg:gap-4 text-xs font-body text-green-800 bg-yellow-50">
                 <span>27 Hours</span>
-                <span>|</span>
-                <span>Certification Included</span>
-                <span>|</span>
+                <span className="hidden lg:inline">|</span>
+                <span className="hidden lg:inline">Certification Included</span>
+                <span className="hidden lg:inline">|</span>
                 <span>Lifetime Access</span>
               </div>
             </div>

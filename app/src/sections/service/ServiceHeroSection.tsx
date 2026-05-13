@@ -22,7 +22,7 @@ export default function ServiceHeroSection({ service }: Props) {
   }, [service]);
 
   return (
-    <section className="relative min-h-[70vh] flex items-end pb-16 lg:pb-24 overflow-hidden">
+    <section className="relative min-h-[50vh] sm:min-h-[60vh] lg:min-h-[70vh] flex items-end pb-12 sm:pb-16 lg:pb-24 overflow-hidden">
       <div className="absolute inset-0 z-0">
         <img loading="lazy"
           src={service.heroImage}

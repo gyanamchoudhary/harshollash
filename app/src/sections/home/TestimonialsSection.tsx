@@ -12,7 +12,7 @@ export default function TestimonialsSection() {
   }: {
     testimonial: (typeof testimonials)[0];
   }) => (
-    <div className="flex-shrink-0 w-[340px] sm:w-[380px] bg-white rounded-2xl p-8 shadow-sm border border-green-600/10 transition-shadow duration-300 hover:shadow-md">
+    <div className="flex-shrink-0 w-[85vw] max-w-[340px] sm:w-[380px] bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-green-600/10 transition-shadow duration-300 hover:shadow-md">
       <Quote className="w-8 h-8 text-yellow-500 mb-4" />
       <p className="font-script text-lg text-green-950 italic leading-relaxed mb-6">
         &ldquo;{testimonial.quote}&rdquo;

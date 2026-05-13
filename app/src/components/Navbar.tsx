@@ -73,13 +73,13 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-container mx-auto px-4 sm:px-6 lg:px-10">
-        <div className="flex items-center justify-between h-20 lg:h-24">
+        <div className="flex items-center justify-between h-16 sm:h-20 lg:h-24">
           {/* Logo */}
           <Link to="/" className="flex items-center z-10">
             <img loading="lazy"
               src="/images/logo_transparent.png"
               alt="Harshollasha"
-              className="h-16 lg:h-20 w-auto object-contain transition-all duration-300"
+              className="h-12 sm:h-14 lg:h-20 w-auto object-contain transition-all duration-300"
             />
           </Link>
 
@@ -163,16 +163,28 @@ export default function Navbar() {
             </Link>
           </div>
 
-          {/* Mobile Menu */}
-          <Sheet open={mobileOpen} onOpenChange={setMobileOpen}>
-            <SheetTrigger asChild>
-              <button
-                className={`lg:hidden p-2 ${scrolled ? 'text-green-950' : 'text-white'}`}
-                aria-label="Toggle menu"
-              >
-                {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-              </button>
-            </SheetTrigger>
+          {/* Mobile Actions */}
+          <div className="flex items-center gap-2 lg:hidden">
+            <a
+              href="tel:+919999999999"
+              className={`w-10 h-10 rounded-full flex items-center justify-center transition-colors ${
+                scrolled
+                  ? 'bg-green-950 text-white hover:bg-green-900'
+                  : 'bg-white/15 text-white hover:bg-white/25 backdrop-blur-sm'
+              }`}
+              aria-label="Call Us"
+            >
+              <Phone className="w-5 h-5" />
+            </a>
+            <Sheet open={mobileOpen} onOpenChange={setMobileOpen}>
+              <SheetTrigger asChild>
+                <button
+                  className={`p-2 ${scrolled ? 'text-green-950' : 'text-white'}`}
+                  aria-label="Toggle menu"
+                >
+                  {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+                </button>
+              </SheetTrigger>
             <SheetContent side="right" className="w-[300px] sm:w-[350px] bg-white">
               <div className="flex flex-col gap-1 mt-8">
                 {navItems.map((item) => (
@@ -227,6 +239,7 @@ export default function Navbar() {
               </div>
             </SheetContent>
           </Sheet>
+          </div>
         </div>
       </div>
     </nav>
