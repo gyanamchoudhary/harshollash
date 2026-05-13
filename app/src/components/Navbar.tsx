@@ -37,20 +37,12 @@ export default function Navbar() {
       <div className="max-w-container mx-auto px-4 sm:px-6 lg:px-10">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2 z-10">
-            <div className="w-9 h-9 rounded-full bg-gradient-to-br from-yellow-500 to-green-800 flex items-center justify-center">
-              <svg viewBox="0 0 24 24" className="w-5 h-5 text-white" fill="currentColor">
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z" />
-                <circle cx="12" cy="12" r="3" opacity="0.3" />
-              </svg>
-            </div>
-            <span
-              className={`font-heading text-lg lg:text-xl font-medium tracking-tight transition-colors ${
-                scrolled ? 'text-green-950' : 'text-white'
-              }`}
-            >
-              HARSHOLLASHA
-            </span>
+          <Link to="/" className="flex items-center z-10">
+            <img
+              src="/images/logo.png"
+              alt="Harshollasha"
+              className="h-10 lg:h-11 w-auto object-contain rounded-lg"
+            />
           </Link>
 
           {/* Desktop Nav */}
