@@ -30,7 +30,7 @@ export default function Footer() {
           <div className="lg:col-span-1">
             <Link to="/" className="flex items-center mb-4">
               <img
-                src="/images/logo.png"
+                src="/images/logo_transparent.png"
                 alt="Harshollasha"
                 className="h-24 lg:h-28 w-auto object-contain"
               />

@@ -39,7 +39,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link to="/" className="flex items-center z-10">
             <img
-              src="/images/logo.png"
+              src="/images/logo_transparent.png"
               alt="Harshollasha"
               className="h-[72px] lg:h-24 w-auto object-contain"
             />
