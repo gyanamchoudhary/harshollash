@@ -107,7 +107,7 @@ export default function Navbar() {
               }`}
             >
               <Phone className="w-4 h-4" />
-              <span>Contact</span>
+              <span>Call Us</span>
             </a>
             <Link
               to="/contact"
