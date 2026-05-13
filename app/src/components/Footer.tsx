@@ -32,7 +32,7 @@ export default function Footer() {
               <img
                 src="/images/logo_transparent.png"
                 alt="Harshollasha"
-                className="h-20 w-auto object-contain"
+                className="h-24 lg:h-28 w-auto object-contain"
               />
             </Link>
             <p className="text-white/85 font-body text-sm leading-relaxed mb-6">

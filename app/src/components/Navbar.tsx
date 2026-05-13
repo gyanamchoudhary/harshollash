@@ -35,13 +35,13 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-container mx-auto px-4 sm:px-6 lg:px-10">
-        <div className="flex items-center justify-between h-20 lg:h-28">
+        <div className="flex items-center justify-between h-[96px] lg:h-[140px]">
           {/* Logo */}
           <Link to="/" className="flex items-center z-10">
             <img
               src="/images/logo_transparent.png"
               alt="Harshollasha"
-              className="h-14 lg:h-[72px] w-auto object-contain"
+              className="h-[72px] lg:h-24 w-auto object-contain"
             />
           </Link>
 
