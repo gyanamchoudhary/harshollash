@@ -41,7 +41,7 @@ export default function Navbar() {
             <img
               src="/images/logo.png"
               alt="Harshollasha"
-              className="h-10 lg:h-11 w-auto object-contain rounded-lg"
+              className="h-12 lg:h-14 w-auto object-contain rounded-lg"
             />
           </Link>
 
