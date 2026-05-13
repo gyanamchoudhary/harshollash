@@ -109,7 +109,7 @@ module.exports = {
         },
         'bounce-soft': {
           '0%, 100%': { transform: 'translateY(0)' },
-          '50%': { transform: 'translateY(-10px)' },
+          '50%': { transform: 'translateY(-4px)' },
         },
       },
       animation: {
@@ -121,7 +121,7 @@ module.exports = {
         'marquee': 'marquee 30s linear infinite',
         'fade-up': 'fade-up 0.6s ease-out forwards',
         'scale-in': 'scale-in 0.5s ease-out forwards',
-        'bounce-soft': 'bounce-soft 2s ease-in-out infinite',
+        'bounce-soft': 'bounce-soft 3s ease-in-out infinite',
       },
     },
   },
