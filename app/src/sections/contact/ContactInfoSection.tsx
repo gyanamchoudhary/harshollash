@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { MapPin, Phone, Mail, ArrowRight, Facebook, Instagram, Youtube } from 'lucide-react';
+import { MapPin, Phone, Mail, ArrowRight, Facebook, Instagram, Youtube, Loader2 } from 'lucide-react';
 import ScrollReveal from '@/components/ScrollReveal';
 
 const contactCards = [
@@ -25,17 +25,43 @@ const contactCards = [
   },
 ];
 
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xrejdjla';
+
 export default function ContactInfoSection() {
   const [formData, setFormData] = useState({ name: '', email: '', phone: '', subject: '', message: '' });
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState('');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => {
-      setSubmitted(false);
-      setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
-    }, 3000);
+    setSubmitting(true);
+    setError('');
+
+    try {
+      const response = await fetch(FORMSPREE_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          subject: formData.subject,
+          message: formData.message,
+        }),
+      });
+
+      if (response.ok) {
+        setSubmitted(true);
+        setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
+      } else {
+        setError('Something went wrong. Please try again.');
+      }
+    } catch {
+      setError('Something went wrong. Please try again.');
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -144,12 +170,25 @@ export default function ContactInfoSection() {
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     className="w-full px-4 py-3 border border-gray-200 rounded-md font-body text-sm focus:border-green-700 focus:ring-1 focus:ring-green-700 outline-none resize-none"
                   />
+                  {error && (
+                    <p className="text-red-600 font-body text-sm text-center">{error}</p>
+                  )}
                   <button
                     type="submit"
-                    className="w-full h-12 bg-green-950 text-white rounded-md font-body font-medium text-sm hover:bg-green-900 transition-all flex items-center justify-center gap-2"
+                    disabled={submitting}
+                    className="w-full h-12 bg-green-950 text-white rounded-md font-body font-medium text-sm hover:bg-green-900 transition-all flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
                   >
-                    Send Message
-                    <ArrowRight className="w-4 h-4" />
+                    {submitting ? (
+                      <>
+                        <Loader2 className="w-4 h-4 animate-spin" />
+                        Sending...
+                      </>
+                    ) : (
+                      <>
+                        Send Message
+                        <ArrowRight className="w-4 h-4" />
+                      </>
+                    )}
                   </button>
                 </form>
               )}
