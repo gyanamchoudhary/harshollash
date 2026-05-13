@@ -1,18 +1,37 @@
-import { useState, useEffect } from 'react';
 import { Quote } from 'lucide-react';
 import { testimonials } from '@/data/testimonials';
 import SectionHeader from '@/components/SectionHeader';
 import ScrollReveal from '@/components/ScrollReveal';
 
 export default function TestimonialsSection() {
-  const [activeIndex, setActiveIndex] = useState(0);
+  // Duplicate testimonials for seamless infinite scroll
+  const duplicatedTestimonials = [...testimonials, ...testimonials];
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveIndex((prev) => (prev + 1) % testimonials.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, []);
+  const TestimonialCard = ({
+    testimonial,
+  }: {
+    testimonial: (typeof testimonials)[0];
+  }) => (
+    <div className="flex-shrink-0 w-[340px] sm:w-[380px] bg-white rounded-2xl p-8 shadow-sm border border-green-600/10 transition-shadow duration-300 hover:shadow-md">
+      <Quote className="w-8 h-8 text-yellow-500 mb-4" />
+      <p className="font-script text-lg text-green-950 italic leading-relaxed mb-6">
+        &ldquo;{testimonial.quote}&rdquo;
+      </p>
+      <div className="flex items-center gap-4">
+        <img
+          src={testimonial.avatar}
+          alt={testimonial.author}
+          className="w-14 h-14 rounded-full object-cover"
+        />
+        <div>
+          <p className="font-body font-semibold text-green-950 text-sm">
+            {testimonial.author}
+          </p>
+          <p className="font-body text-xs text-green-700">{testimonial.role}</p>
+        </div>
+      </div>
+    </div>
+  );
 
   return (
     <section className="py-20 lg:py-28 bg-yellow-50 relative overflow-hidden">
@@ -21,75 +40,23 @@ export default function TestimonialsSection() {
 
       <div className="max-w-container mx-auto px-4 sm:px-6 lg:px-10 relative z-10">
         <SectionHeader label="Testimonials" heading="What Our Clients Say" />
+      </div>
 
-        <ScrollReveal className="mt-16">
-          {/* Desktop: Horizontal scroll cards */}
-          <div className="hidden lg:flex gap-6 overflow-x-auto pb-4 scrollbar-hide snap-x snap-mandatory">
-            {testimonials.map((testimonial, i) => (
-              <div
-                key={i}
-                className={`flex-shrink-0 w-[360px] snap-start bg-white rounded-2xl p-8 shadow-sm border border-green-600/10 transition-all duration-500 ${
-                  i === activeIndex ? 'ring-2 ring-yellow-500/50 shadow-md' : ''
-                }`}
-              >
-                <Quote className="w-8 h-8 text-yellow-500 mb-4" />
-                <p className="font-script text-lg text-green-950 italic leading-relaxed mb-6">
-                  &ldquo;{testimonial.quote}&rdquo;
-                </p>
-                <div className="flex items-center gap-4">
-                  <img
-                    src={testimonial.avatar}
-                    alt={testimonial.author}
-                    className="w-14 h-14 rounded-full object-cover"
-                  />
-                  <div>
-                    <p className="font-body font-semibold text-green-950 text-sm">{testimonial.author}</p>
-                    <p className="font-body text-xs text-green-700">{testimonial.role}</p>
-                  </div>
-                </div>
-              </div>
+      <ScrollReveal className="mt-16">
+        {/* Marquee container */}
+        <div className="relative w-full overflow-hidden">
+          {/* Fade edges */}
+          <div className="absolute left-0 top-0 bottom-0 w-16 sm:w-24 bg-gradient-to-r from-yellow-50 to-transparent z-10 pointer-events-none" />
+          <div className="absolute right-0 top-0 bottom-0 w-16 sm:w-24 bg-gradient-to-l from-yellow-50 to-transparent z-10 pointer-events-none" />
+
+          {/* Scrolling track */}
+          <div className="flex gap-6 animate-marquee w-max py-2 hover:[animation-play-state:paused]">
+            {duplicatedTestimonials.map((testimonial, i) => (
+              <TestimonialCard key={i} testimonial={testimonial} />
             ))}
           </div>
-
-          {/* Mobile: Single card with dots */}
-          <div className="lg:hidden">
-            <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-green-600/10">
-              <Quote className="w-8 h-8 text-yellow-500 mb-4" />
-              <p className="font-script text-lg text-green-950 italic leading-relaxed mb-6">
-                &ldquo;{testimonials[activeIndex].quote}&rdquo;
-              </p>
-              <div className="flex items-center gap-4">
-                <img
-                  src={testimonials[activeIndex].avatar}
-                  alt={testimonials[activeIndex].author}
-                  className="w-14 h-14 rounded-full object-cover"
-                />
-                <div>
-                  <p className="font-body font-semibold text-green-950 text-sm">
-                    {testimonials[activeIndex].author}
-                  </p>
-                  <p className="font-body text-xs text-green-700">
-                    {testimonials[activeIndex].role}
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Dots */}
-            <div className="flex justify-center gap-2 mt-6">
-              {testimonials.map((_, i) => (
-                <button
-                  key={i}
-                  onClick={() => setActiveIndex(i)}
-                  className={`h-2.5 rounded-full transition-all duration-300 ${
-                    i === activeIndex ? 'w-8 bg-green-800' : 'w-2.5 bg-green-600/30'
-                  }`}
-                />
-              ))}
-            </div>
-          </div>
-        </ScrollReveal>
-      </div>
+        </div>
+      </ScrollReveal>
     </section>
   );
 }
