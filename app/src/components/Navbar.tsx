@@ -101,15 +101,13 @@ export default function Navbar() {
           {/* Desktop CTA */}
           <div className="hidden lg:flex items-center gap-4">
             <a
-              href="https://wa.me/919999999999"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="tel:+919999999999"
               className={`flex items-center gap-2 text-sm font-body font-medium transition-colors ${
                 scrolled ? 'text-green-800 hover:text-green-950' : 'text-white/90 hover:text-white'
               }`}
             >
               <Phone className="w-4 h-4" />
-              <span>WhatsApp</span>
+              <span>Contact</span>
             </a>
             <Link
               to="/contact"
