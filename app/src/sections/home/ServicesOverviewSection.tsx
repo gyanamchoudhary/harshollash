@@ -154,10 +154,7 @@ export default function ServicesOverviewSection() {
               <div className="relative w-[72px] h-[72px] rounded-full bg-gradient-to-br from-yellow-500 to-green-800 flex items-center justify-center shadow-lg">
                 <Heart className="w-8 h-8 text-white animate-breathe" fill="white" />
               </div>
-              {/* Label */}
-              <p className="mt-3 font-body text-xs font-semibold text-green-800 tracking-widest uppercase">
-                Healing Core
-              </p>
+              {/* Label removed */}
             </div>
 
             {/* Service cards orbiting */}
