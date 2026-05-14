@@ -17,6 +17,7 @@ export default function ContactFAQSection() {
               <div className="border border-green-600/20 rounded-xl overflow-hidden">
                 <button
                   onClick={() => setOpenIndex(openIndex === i ? null : i)}
+                  aria-expanded={openIndex === i}
                   className="w-full flex items-center justify-between p-5 text-left"
                 >
                   <h4 className="font-heading text-base text-green-950 pr-4">{item.question}</h4>

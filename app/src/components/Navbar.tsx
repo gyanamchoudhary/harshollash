@@ -100,6 +100,8 @@ export default function Navbar() {
                           : 'text-white/90 hover:text-white'
                       }`}
                       onClick={() => setServicesOpen(!servicesOpen)}
+                      aria-expanded={servicesOpen}
+                      aria-haspopup="true"
                     >
                       {item.label}
                       <ChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180" />
@@ -193,6 +195,7 @@ export default function Navbar() {
                       <>
                         <button
                           onClick={() => setServicesOpen(!servicesOpen)}
+                          aria-expanded={servicesOpen}
                           className="flex items-center justify-between w-full px-4 py-3 text-left font-body text-green-950 font-medium"
                         >
                           {item.label}

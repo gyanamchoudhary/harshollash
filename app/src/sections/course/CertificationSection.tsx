@@ -18,12 +18,11 @@ export default function CertificationSection() {
           <div className="bg-yellow-50 border-[3px] border-yellow-800 rounded-2xl p-8 lg:p-12 shadow-lg max-w-2xl mx-auto text-center">
             <div className="border-b-2 border-dashed border-yellow-800/30 pb-6 mb-6">
               <div className="flex items-center justify-center gap-3 mb-4">
-                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-yellow-500 to-green-800 flex items-center justify-center">
-                  <svg viewBox="0 0 24 24" className="w-6 h-6 text-white" fill="currentColor">
-                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z" />
-                  </svg>
-                </div>
-                <span className="font-heading text-xl text-green-950">HARSHOLLASHA</span>
+                <img
+                  src="/images/logo_transparent.svg"
+                  alt="Harshollasha"
+                  className="h-24 w-auto object-contain"
+                />
               </div>
               <h3 className="font-heading text-2xl text-green-950">Certificate of Completion</h3>
               <p className="font-body text-green-800 mt-2">Pranashakti Healing &amp; Scanning</p>

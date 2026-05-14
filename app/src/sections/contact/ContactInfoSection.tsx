@@ -130,6 +130,7 @@ export default function ContactInfoSection() {
                   <input
                     type="text"
                     placeholder="Full Name *"
+                    aria-label="Full Name"
                     required
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
@@ -138,6 +139,7 @@ export default function ContactInfoSection() {
                   <input
                     type="email"
                     placeholder="Email Address *"
+                    aria-label="Email Address"
                     required
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
@@ -146,11 +148,13 @@ export default function ContactInfoSection() {
                   <input
                     type="tel"
                     placeholder="Phone Number"
+                    aria-label="Phone Number"
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                     className="w-full h-12 px-4 border border-gray-200 rounded-md font-body text-sm focus:border-green-700 focus:ring-1 focus:ring-green-700 outline-none"
                   />
                   <select
+                    aria-label="Select Subject"
                     value={formData.subject}
                     onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
                     className="w-full h-12 px-4 border border-gray-200 rounded-md font-body text-sm focus:border-green-700 focus:ring-1 focus:ring-green-700 outline-none bg-white text-gray-500"
@@ -164,6 +168,7 @@ export default function ContactInfoSection() {
                   </select>
                   <textarea
                     placeholder="Your Message *"
+                    aria-label="Your Message"
                     required
                     rows={4}
                     value={formData.message}

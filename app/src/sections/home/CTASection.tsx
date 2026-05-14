@@ -59,21 +59,24 @@ export default function CTASection() {
                 <input
                   type="text"
                   placeholder="Full Name *"
+                  aria-label="Full Name"
                   required
                   className="w-full h-12 px-4 border border-gray-200 rounded-md font-body text-sm focus:border-green-700 focus:ring-1 focus:ring-green-700 outline-none"
                 />
                 <input
                   type="email"
                   placeholder="Email Address *"
+                  aria-label="Email Address"
                   required
                   className="w-full h-12 px-4 border border-gray-200 rounded-md font-body text-sm focus:border-green-700 focus:ring-1 focus:ring-green-700 outline-none"
                 />
                 <input
                   type="tel"
                   placeholder="Phone Number"
+                  aria-label="Phone Number"
                   className="w-full h-12 px-4 border border-gray-200 rounded-md font-body text-sm focus:border-green-700 focus:ring-1 focus:ring-green-700 outline-none"
                 />
-                <select className="w-full h-12 px-4 border border-gray-200 rounded-md font-body text-sm focus:border-green-700 focus:ring-1 focus:ring-green-700 outline-none bg-white text-gray-500">
+                <select aria-label="Select Service" required className="w-full h-12 px-4 border border-gray-200 rounded-md font-body text-sm focus:border-green-700 focus:ring-1 focus:ring-green-700 outline-none bg-white text-gray-500">
                   <option value="">Select Service</option>
                   <option value="meditation">Meditation</option>
                   <option value="yoga">Yoga</option>
@@ -86,6 +89,7 @@ export default function CTASection() {
                 </select>
                 <textarea
                   placeholder="Your Message"
+                  aria-label="Your Message"
                   rows={3}
                   className="w-full px-4 py-3 border border-gray-200 rounded-md font-body text-sm focus:border-green-700 focus:ring-1 focus:ring-green-700 outline-none resize-none"
                 />

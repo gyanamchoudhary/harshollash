@@ -6,6 +6,8 @@ import ScrollReveal from '@/components/ScrollReveal';
 export default function VideoIntroSection() {
   const [isOpen, setIsOpen] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
+  const closeButtonRef = useRef<HTMLButtonElement>(null);
+  const lightboxRef = useRef<HTMLDivElement>(null);
 
   // Play when lightbox opens, pause when closed
   useEffect(() => {
@@ -17,14 +19,44 @@ export default function VideoIntroSection() {
     }
   }, [isOpen]);
 
-  // Close on Escape key
+  // Close on Escape key + focus trap
   useEffect(() => {
+    if (!isOpen) return;
+
+    // Move focus to close button when opening
+    closeButtonRef.current?.focus();
+
     const handleKey = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') setIsOpen(false);
+      if (e.key === 'Escape') {
+        setIsOpen(false);
+        return;
+      }
+
+      // Focus trap for Tab key
+      if (e.key === 'Tab' && lightboxRef.current) {
+        const focusableElements = lightboxRef.current.querySelectorAll<HTMLElement>(
+          'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+        );
+        const firstElement = focusableElements[0];
+        const lastElement = focusableElements[focusableElements.length - 1];
+
+        if (e.shiftKey) {
+          if (document.activeElement === firstElement) {
+            e.preventDefault();
+            lastElement?.focus();
+          }
+        } else {
+          if (document.activeElement === lastElement) {
+            e.preventDefault();
+            firstElement?.focus();
+          }
+        }
+      }
     };
+
     window.addEventListener('keydown', handleKey);
     return () => window.removeEventListener('keydown', handleKey);
-  }, []);
+  }, [isOpen]);
 
   return (
     <section className="py-20 lg:py-28 bg-white">
@@ -39,7 +71,12 @@ export default function VideoIntroSection() {
             onClick={() => setIsOpen(true)}
             role="button"
             tabIndex={0}
-            onKeyDown={(e) => e.key === 'Enter' && setIsOpen(true)}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                setIsOpen(true);
+              }
+            }}
             aria-label="Play introduction video"
           >
             <img loading="lazy"
@@ -60,10 +97,12 @@ export default function VideoIntroSection() {
       {/* Video Lightbox */}
       {isOpen && (
         <div
+          ref={lightboxRef}
           className="fixed inset-0 z-[200] bg-black/90 flex items-center justify-center p-4"
           onClick={() => setIsOpen(false)}
         >
           <button
+            ref={closeButtonRef}
             className="absolute top-4 right-4 sm:top-6 sm:right-6 text-white/80 hover:text-white transition-colors z-10"
             onClick={() => setIsOpen(false)}
             aria-label="Close video"

@@ -22,6 +22,7 @@ export default function CourseModulesSection() {
               <div className="bg-white/10 rounded-xl overflow-hidden">
                 <button
                   onClick={() => setOpenIndex(openIndex === i ? null : i)}
+                  aria-expanded={openIndex === i}
                   className="w-full flex items-center justify-between p-5 text-left"
                 >
                   <div className="flex items-center gap-4">
