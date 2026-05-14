@@ -84,7 +84,7 @@ export default function Footer() {
           <div className="lg:col-span-1">
             <Link to="/" className="flex items-center mb-4">
               <img loading="lazy"
-                src="/images/logo_transparent.svg"
+                src="/images/logo_transparent (1).svg"
                 alt="Harshollasha"
                 className="h-28 lg:h-32 w-auto object-contain drop-shadow-[0_0_8px_rgba(253,224,71,0.4)]"
               />

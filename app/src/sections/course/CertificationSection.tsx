@@ -19,7 +19,7 @@ export default function CertificationSection() {
             <div className="border-b-2 border-dashed border-yellow-800/30 pb-6 mb-6">
               <div className="flex items-center justify-center gap-3 mb-4">
                 <img
-                  src="/images/logo_transparent.svg"
+                  src="/images/logo_transparent (1).svg"
                   alt="Harshollasha"
                   className="h-24 w-auto object-contain"
                 />
