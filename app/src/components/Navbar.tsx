@@ -77,9 +77,9 @@ export default function Navbar() {
           {/* Logo */}
           <Link to="/" className="flex items-center z-10">
             <img loading="lazy"
-              src="/images/logo_transparent.svg"
+              src="/images/logo_transparent (1).svg"
               alt="Harshollasha"
-              className="h-14 sm:h-18 lg:h-24 w-auto object-contain transition-all duration-300 drop-shadow-[0_0_6px_rgba(253,224,71,0.5)] hover:drop-shadow-[0_0_12px_rgba(253,224,71,0.8)]"
+              className="h-14 sm:h-18 lg:h-24 w-auto object-contain transition-all duration-300"
             />
           </Link>
 
@@ -119,7 +119,7 @@ export default function Navbar() {
                 ) : (
                   <Link
                     to={item.href}
-                    className={`font-body text-xs font-medium transition-colors py-2 relative uppercase tracking-[0.12em] ${
+                    className={`font-body text-sm font-medium transition-colors py-2 relative uppercase tracking-[0.12em] ${
                       isActive(item.href)
                         ? scrolled
                           ? 'text-green-800'
