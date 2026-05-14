@@ -17,7 +17,7 @@ export default function FounderSection() {
           <ScrollReveal direction="left" className="lg:col-span-2">
             <div className="img-zoom-container rounded-2xl shadow-xl">
               <img loading="lazy"
-                src="/images/guruji-portrait-full.jpg"
+                src="/images/Guruji_aboutUs.png"
                 alt="Harshollasha Guruji - Founder & Spiritual Master"
                 className="w-full rounded-2xl object-cover aspect-[3/4]"
               />

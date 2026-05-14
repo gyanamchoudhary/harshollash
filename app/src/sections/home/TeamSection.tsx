@@ -14,11 +14,11 @@ export default function TeamSection() {
         <ScrollReveal className="mt-16">
           <div className="bg-yellow-50 rounded-3xl p-6 sm:p-10 lg:p-12 shadow-lg max-w-4xl mx-auto card-lift">
             <div className="flex flex-col md:flex-row gap-8 items-center">
-              <div className="w-full md:w-72 flex-shrink-0 img-zoom-container rounded-2xl shadow-md">
+              <div className="w-full md:w-80 flex-shrink-0 rounded-2xl shadow-md">
                 <img loading="lazy"
                   src={founder.image}
                   alt={founder.name}
-                  className="w-full aspect-[3/4] object-cover rounded-2xl"
+                  className="w-full h-auto object-contain rounded-2xl"
                 />
               </div>
               <div className="flex-1 text-center md:text-left">

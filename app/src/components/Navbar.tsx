@@ -73,13 +73,13 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-container mx-auto px-4 sm:px-6 lg:px-10">
-        <div className="flex items-center justify-between h-16 sm:h-20 lg:h-24">
+        <div className="flex items-center justify-between h-18 sm:h-22 lg:h-28">
           {/* Logo */}
           <Link to="/" className="flex items-center z-10">
             <img loading="lazy"
-              src="/images/logo_transparent.png"
+              src="/images/logo_transparent.svg"
               alt="Harshollasha"
-              className="h-12 sm:h-14 lg:h-20 w-auto object-contain transition-all duration-300"
+              className="h-14 sm:h-18 lg:h-24 w-auto object-contain transition-all duration-300 drop-shadow-[0_0_6px_rgba(253,224,71,0.5)] hover:drop-shadow-[0_0_12px_rgba(253,224,71,0.8)]"
             />
           </Link>
 

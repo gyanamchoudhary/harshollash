@@ -3,7 +3,7 @@ import { TeamMember } from '@/types';
 export const founder: TeamMember = {
   name: 'Harshollasha Guruji',
   role: 'Founder & Spiritual Master',
-  image: '/images/founder-portrait.jpg',
+  image: '/images/Guruji.png',
   socials: [
     { platform: 'instagram', url: '#' },
     { platform: 'youtube', url: '#' },
