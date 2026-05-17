@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { Phone } from 'lucide-react';
 import { Service } from '@/types';
 import ScrollReveal from '@/components/ScrollReveal';
+import { SITE_CONFIG } from '@/config/site';
 
 interface Props {
   service: Service;
@@ -31,7 +32,7 @@ export default function ServiceCTASection({ service }: Props) {
               Book a Session
             </Link>
             <a
-              href="https://wa.me/919999999999"
+              href={`https://wa.me/${SITE_CONFIG.phone.whatsapp}`}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-white/80 hover:text-white font-body text-sm transition-colors"

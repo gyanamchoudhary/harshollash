@@ -1,3 +1,5 @@
+import { SITE_CONFIG } from '@/config/site';
+
 function WhatsAppIcon({ className }: { className?: string }) {
   return (
     <svg
@@ -14,7 +16,7 @@ function WhatsAppIcon({ className }: { className?: string }) {
 export default function WhatsAppButton() {
   return (
     <a
-      href="https://wa.me/919999999999"
+      href={`https://wa.me/${SITE_CONFIG.phone.whatsapp}`}
       target="_blank"
       rel="noopener noreferrer"
       className="fixed bottom-[max(1.5rem,env(safe-area-inset-bottom))] left-6 z-50 w-14 h-14 rounded-full bg-[#25D366] text-white shadow-lg flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-xl group animate-bounce-elegant"

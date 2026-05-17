@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, ChevronDown, Phone } from 'lucide-react';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { navItems } from '@/data/navigation';
+import { SITE_CONFIG } from '@/config/site';
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -149,7 +150,7 @@ export default function Navbar() {
           {/* Desktop CTA */}
           <div className="hidden lg:flex items-center gap-4">
             <a
-              href="tel:+919999999999"
+              href={`tel:${SITE_CONFIG.phone.tel}`}
               className={`flex items-center gap-2 text-sm font-body font-medium transition-colors ${
                 scrolled ? 'text-green-800 hover:text-green-950' : 'text-white/90 hover:text-white'
               }`}
@@ -168,7 +169,7 @@ export default function Navbar() {
           {/* Mobile Actions */}
           <div className="flex items-center gap-2 lg:hidden">
             <a
-              href="tel:+919999999999"
+              href={`tel:${SITE_CONFIG.phone.tel}`}
               className={`w-10 h-10 rounded-full flex items-center justify-center transition-colors ${
                 scrolled
                   ? 'bg-green-950 text-white hover:bg-green-900'

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin, Facebook, Instagram, Youtube, Send, CheckCircle } from 'lucide-react';
+import { SITE_CONFIG } from '@/config/site';
 
 export default function Footer() {
   const [email, setEmail] = useState('');
@@ -154,7 +155,7 @@ export default function Footer() {
               </li>
               <li className="flex items-start gap-3">
                 <Phone className="w-5 h-5 text-green-800 mt-0.5 flex-shrink-0" />
-                <span className="text-green-800 font-body text-sm">+91 99999 99999</span>
+                <span className="text-green-800 font-body text-sm">{SITE_CONFIG.phone.display}</span>
               </li>
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-green-800 mt-0.5 flex-shrink-0" />

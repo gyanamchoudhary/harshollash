@@ -1,5 +1,6 @@
 import { Phone, Mail, ArrowRight } from 'lucide-react';
 import ScrollReveal from '@/components/ScrollReveal';
+import { SITE_CONFIG } from '@/config/site';
 
 export default function CTASection() {
   return (
@@ -29,13 +30,13 @@ export default function CTASection() {
                 <div className="w-10 h-10 rounded-full bg-yellow-500/20 flex items-center justify-center">
                   <Phone className="w-5 h-5 text-yellow-500" />
                 </div>
-                <span className="font-body text-white">+91 99999 99999</span>
+                <span className="font-body text-white">{SITE_CONFIG.phone.display}</span>
               </div>
               <div className="flex items-center gap-4">
                 <div className="w-10 h-10 rounded-full bg-yellow-500/20 flex items-center justify-center">
                   <Mail className="w-5 h-5 text-yellow-500" />
                 </div>
-                <span className="font-body text-white">info@harshollasha.com</span>
+                <span className="font-body text-white">{SITE_CONFIG.email}</span>
               </div>
             </ScrollReveal>
           </div>

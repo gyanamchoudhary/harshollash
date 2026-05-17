@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { MapPin, Phone, Mail, ArrowRight, Facebook, Instagram, Youtube, Loader2 } from 'lucide-react';
 import ScrollReveal from '@/components/ScrollReveal';
+import { SITE_CONFIG } from '@/config/site';
 
 const contactCards = [
   {
@@ -12,7 +13,7 @@ const contactCards = [
   {
     icon: Phone,
     title: 'Call Us',
-    info: '+91 99999 99999',
+    info: SITE_CONFIG.phone.display,
     subInfo: 'Mon-Sat, 9:00 AM - 6:00 PM IST',
     bg: 'bg-sage-50',
   },
@@ -25,7 +26,7 @@ const contactCards = [
   },
 ];
 
-const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xrejdjla';
+const API_ENDPOINT = '/api/contact';
 
 export default function ContactInfoSection() {
   const [formData, setFormData] = useState({ name: '', email: '', phone: '', subject: '', message: '' });
@@ -39,7 +40,7 @@ export default function ContactInfoSection() {
     setError('');
 
     try {
-      const response = await fetch(FORMSPREE_ENDPOINT, {
+      const response = await fetch(API_ENDPOINT, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
         body: JSON.stringify({
@@ -51,11 +52,13 @@ export default function ContactInfoSection() {
         }),
       });
 
-      if (response.ok) {
+      const data = await response.json().catch(() => ({}));
+
+      if (response.ok && data.success) {
         setSubmitted(true);
         setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
       } else {
-        setError('Something went wrong. Please try again.');
+        setError(data.error || 'Something went wrong. Please try again.');
       }
     } catch {
       setError('Something went wrong. Please try again.');

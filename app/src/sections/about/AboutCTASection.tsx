@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Phone, Mail } from 'lucide-react';
 import ScrollReveal from '@/components/ScrollReveal';
+import { SITE_CONFIG } from '@/config/site';
 
 export default function AboutCTASection() {
   return (
@@ -38,11 +39,11 @@ export default function AboutCTASection() {
           <div className="flex flex-wrap items-center justify-center gap-8 mt-8">
             <div className="flex items-center gap-2 text-yellow-500">
               <Phone className="w-4 h-4" />
-              <span className="font-body text-sm text-white">+91 99999 99999</span>
+              <span className="font-body text-sm text-white">{SITE_CONFIG.phone.display}</span>
             </div>
             <div className="flex items-center gap-2 text-yellow-500">
               <Mail className="w-4 h-4" />
-              <span className="font-body text-sm text-white">info@harshollasha.com</span>
+              <span className="font-body text-sm text-white">{SITE_CONFIG.email}</span>
             </div>
           </div>
         </ScrollReveal>
